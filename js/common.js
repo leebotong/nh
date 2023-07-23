@@ -27,10 +27,10 @@ $(function () {
 			// $(tabWrap).on('click', '.tab-btn > button', handleClickEvent);
 			$(tabWrap).on('click', '.tab-btn', handleClickEvent);
 			$(tabWrap).on('keydown', '.tab-nav', handleKeyEvent);
-			function handleClickEvent(event) {
-				event = event || window.event;
-				event.stopPropagation();
-				var currTab = event.currentTarget;
+			function handleClickEvent(e) {
+				e = e || window.e;
+				e.stopPropagation();
+				var currTab = e.currentTarget;
 
 				activateTab(currTab);
 				activateTabPanel(currTab);
@@ -73,16 +73,16 @@ $(function () {
 						.prop('hidden', true)
 			}
 
-			function handleKeyEvent(event) {
-				event = event || window.event;
-				event.stopPropagation();
-				var keycode = event.keyCode || event.which;
+			function handleKeyEvent(e) {
+				e = e || window.e;
+				e.stopPropagation();
+				var keycode = e.keyCode || e.which;
 
 				switch(keycode) {
 					// 왼쪽방향키
 					case 37:
-						if(event.target.previousElementSibling) {
-							$(event.target)
+						if(e.target.previousElementSibling) {
+							$(e.target)
 								.attr({
 									'tabindex':'-1'
 								})
@@ -92,7 +92,7 @@ $(function () {
 									})
 									.focus()
 						} else {
-							$(event.target)
+							$(e.target)
 								.attr({
 									'tabindex':'-1'
 								})
@@ -106,9 +106,8 @@ $(function () {
 						
 					// 오른쪽방향키
 					case 39:
-						console.log("오른쪽");
-						if(event.target.nextElementSibling) {
-							$(event.target)
+						if(e.target.nextElementSibling) {
+							$(e.target)
 								.attr({
 									'tabindex':'-1'
 								})
@@ -118,7 +117,7 @@ $(function () {
 									})
 									.focus()
 						} else {
-							$(event.target)
+							$(e.target)
 								.attr({
 									'tabindex':'-1'
 								})
@@ -133,9 +132,9 @@ $(function () {
 					// 스페이스키
 					case 32:
 					case 13:
-						event.preventDefault();
-						activateTab(event.target);
-						activateTabPanel(event.target);
+						e.preventDefault();
+						activateTab(e.target);
+						activateTabPanel(e.target);
 						break;
 					// 탭키
 					// case 9:
@@ -235,5 +234,5 @@ function popClose(e) {
 	$('html, body').css("overflow","auto");
 	$('#wrap').attr('aria-hidden', false);
 	POPUP.attr('aria-hidden', true);
-  lastFocusedElement.focus();
+  	lastFocusedElement.focus();
 }
