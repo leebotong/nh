@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/var.css">
+	<link rel="stylesheet" href="../../css/comm.css">
+	<link rel="stylesheet" href="../../css/form.css">
+	<link rel="stylesheet" href="../../css/comp.css">
+	<link rel="stylesheet" href="../../css/popup.css">
+	<link rel="stylesheet" href="../../css/layout.css">
+    <script src="../../js/jquery-3.6.4.min.js"></script>
+    <script src="../../js/common.js"></script>
+</head>
+<body>
+    <section id="wrapper" aria-hidden="true">
+        <header>
+            <div id="header">
+                <div class="header-left">
+                    <button title="뒤로가기"><i class="ic-btn-back"></i></button>
+                </div>
+                <h1>모바일인증서발급</h1>
+                <div class="header-right">
+                    <button title="메인으로"><i class="ic-btn-home"></i></button>
+                    <button title="전체메뉴"><i class="ic-btn-menu"></i></button>
+                </div>
+            </div>
+        </header>
+        <div id="container">
+            <div class="contents">
+                <button type="button" aria-haspopup="dialog" onclick="popOpen(popupFull)" class="btn st_medium st_primary">팝업열기</button>
+            </div>
+            <div class="fixed-bottom">fixed bottom</div>
+        </div>
+    </section>
+
+    <section id="popupFull" class="popup-area st_full" hidden>
+        <div class="mask"></div>
+        <div class="popup-wrap">
+            <div class="popup-container">
+                <div class="popup-header">
+                    <h2>Full 팝업</h2>
+                </div>
+                <div class="popup-body">
+                    <p style="height:600px">팝업컨텐츠</p>
+                    <p>팝업컨텐츠</p>
+                </div>
+                <div class="popup-footer">
+                    <p>footer</p>
+                </div>
+                <button type="button" onclick="popClose(this)" class="popup-close">팝업닫기</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

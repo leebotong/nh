@@ -1,0 +1,75 @@
+@charset 'UTF-8';
+
+:root{
+	--inp-bdc:#e0e0e4;
+	--inp-dis:#f2f2f4;
+}
+
+/* --------------------------
+		인풋과 셀렉트
+-------------------------- */
+input:where([type=text],[type=password],[type=tel]){height:45px;border-radius:0;border-bottom:1px solid var(--inp-bdc);font-weight:500;font-size:18px;color:var(--fc-01);}
+input::placeholder{color:var(--fc-06);}
+
+.custom-select{border-bottom:1px solid var(--inp-bdc);}
+
+/* --------------------------
+		체크박스와 라디오
+-------------------------- */
+.form-check{display:inline-flex;align-items:center;}
+.form-check input{margin-right:10px;flex-shrink:0;}
+.form-check input[type='checkbox']{position:relative;width:28px;height:28px;border-radius:50%;border:1px solid var(--inp-bdc);}
+.form-check input[type='checkbox']:after{content:'';position:absolute;z-index:10;top:0;left:0;right:0;bottom:0;background-color:var(--inp-bdc);-webkit-mask: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcgMTIuMzU2NkwxMC4zNTY2IDE1LjcxMzNMMTYuMjMwOCA5IiBzdHJva2U9IiNFMEUwRTAiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==') center no-repeat;-webkit-mask-size:100%;}
+.form-check input[type='checkbox']:disabled{background-color:var(--bg-c02);}
+.form-check input[type='checkbox']:checked{border:none;background-color:var(--col-primary);}
+.form-check input[type='checkbox']:checked:after{background-color:var(--col-white);}
+.form-check input[type='checkbox']:checked:disabled{opacity:.2;}
+.form-check input[type='radio']{position:relative;width:28px;height:28px;border-radius:50%;border:1px solid var(--inp-bdc);}
+.form-check input[type='radio']:after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:13px;height:13px;border-radius:50%;background:var(--col-white);}
+.form-check input[type='radio']:disabled{background:var(--inp-dis) !important;}
+.form-check input[type='radio']:disabled:after{background:var(--inp-dis);}
+.form-check input[type='radio']:checked{border:none;background-color:var(--col-primary);}
+.form-check input[type='radio']:checked:disabled:after{background:var(--col-white);}
+.form-check label{font-size:16px;}
+
+.form-group{display:flex;gap:20px;}
+.form-group.st_button{gap:0;}
+.form-group.st_button .form-check{flex:1;}
+.form-group.st_button .form-check input{margin:0;width:auto;height:auto;border:none;}
+.form-group.st_button .form-check input:after{display:none;}
+.form-group.st_button .form-check label{display:flex;justify-content:center;align-items:center;width:100%;height:42px;border:1px solid var(--inp-bdc);color:var(--fc-04);cursor:pointer;}
+.form-group.st_button .form-check:not(:first-child){margin-left:-1px;}
+.form-group.st_button .form-check:first-child label{border-radius:var(--bdr-radius) 0 0 var(--bdr-radius);}
+.form-group.st_button .form-check:last-child label{border-radius:0 var(--bdr-radius) var(--bdr-radius) 0;}
+.form-group.st_button .form-check input:checked + label{position:relative;z-index:10;border-color:var(--fc-01);color:var(--fc-01);}
+
+
+/*.form-check .table-list-desc{flex-shrink:0;} */
+/* 체크박스 인라인 */
+/* .form-check.st_inline{display:inline-flex;margin-right:10px;} */
+/* 라디오 그룹 - 세로정렬 */
+/* .form-items-check .form-check{position:relative;min-height:48px;border:1px solid #ebebeb;border-radius:var(--mg-chk);align-items:center;}
+.form-items-check .form-check input.check-input{position:absolute;top:0;left:0;width:100%;height:100%;background:none;}	
+.form-items-check .form-check input.check-input+label{display:block;padding:11px;font-size:14px;color:var(--fc-05);text-align:center;line-height:20px;}
+.form-items-check .form-check input.check-input:checked:before{position:absolute;top:-1px;right:-1px;bottom:-1px;left:-1px;border:2px solid var(--main);border-radius:var(--mg-chk);content:'';}
+.form-items-check .form-check input.check-input:checked+label{font-weight:700;color:var(--main);}
+.form-items-check .form-check input.check-input+label{width:100%;text-align:left;}
+.form-items-check .form-check:nth-child(n+2){margin-top:var(--mg-chk);} */
+/* 라디오 그룹 - 1/n */
+/* .form-items-check.st_row{display:flex;}
+.form-items-check.st_row .form-check{flex:1;}
+.form-items-check.st_row+.form-items-check.st_row{margin-top:11px;}
+.form-items-check.st_row .form-check:nth-child(n+2){margin-top:0;margin-left:var(--mg-chk);}
+.form-items-check.st_row .form-check input.check-input+label{text-align:center;} */
+/* 라디오 그룹 - 5:5 */
+/* .form-items-check.st_row-5{display:flex;flex-wrap:wrap;}
+.form-items-check.st_row-5 .form-check{flex:0 0 calc(50% - (var(--mg-chk) / 2));}
+.form-items-check.st_row-5 .form-check:nth-child(n+2){margin-top:0;margin-left:var(--mg-chk);}
+.form-items-check.st_row-5 .form-check:nth-child(2n+1){margin-left:0;}
+.form-items-check.st_row-5 .form-check:nth-child(n+3){margin-top:var(--mg-chk);}
+.form-items-check.st_row-5 .form-check input.check-input+label{text-align:center;} */
+/* 라디오 그룹 - 4:6 */
+/* .form-items.st_row-46{display:flex;flex-wrap:wrap;}
+.form-items.st_row-46 .form-item{flex:1;}
+.form-items.st_row-46 .form-item:first-child{flex:0 0 calc(40% - (var(--mg-chk) / 2));}
+.form-items.st_row-46 .form-item:nth-child(n+2){margin-top:0;margin-left:var(--mg-chk);} */

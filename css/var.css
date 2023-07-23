@@ -1,0 +1,49 @@
+@charset 'UTF-8';
+
+:root{
+	/* body */
+	--body-bg:var(--white);
+	--body-c:var(--black);
+	--body-ff:var(--ff-roboto);
+	--body-fz:14px;
+	--body-fw:normal;
+	--body-text-align:left;
+
+	/* font */
+	--ff-noto:'Noto Sans KR', stem-ui, -apple-system, sans-serif;
+	--ff-roboto:'Roboto', 'Noto Sans KR', stem-ui, -apple-system, sans-serif;
+
+	--fc-default:var(--fc-02);
+	--fc-01:#111;
+	--fc-02:#333;
+	--fc-03:#666;
+	--fc-04:#888;
+	--fc-05:#999;
+	--fc-06:#bbb;
+	--fc-warning:#ec0c0c;
+	--fc-secondary:var(--col-secondary);
+	--fc-primary:var(--col-primary);
+	
+	--white:#fff;
+	--col-white:#fff;
+	--col-black:#000;
+	--col-primary:#19a647;
+	--col-secondary:#19babf;
+
+	/* bg color */
+	--bg-c01:#f1f1f1;
+	--bg-c02:#f9f9f9;
+	--bg-c03:#ebf9f0;
+	--bg-c04:#7e858e;
+
+	/* line color */
+	--line-c01:#ccc;
+	--line-c02:#ddd;
+	--line-c03:#e1e1e1;
+	--line-c04:#ebebeb;
+	--line-c05:#eee;
+	--line-c06:#f1f1f1;
+
+	/* border */
+	--bdr-radius:5px;
+}
