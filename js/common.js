@@ -21,7 +21,12 @@ $(function () {
 			var tabWrap = document.querySelector(".tab");
 			if(!tabWrap) return;
 
-			$(tabWrap).on('click', '.tab-btn > button', handleClickEvent);
+			// $(tabWrap).on('click', 'tab-btn', handleClickEvent);
+			// $(tabWrap).on('keydown', 'tab-nav', handleKeyEvent);
+
+			// $(tabWrap).on('click', '.tab-btn > button', handleClickEvent);
+			$(tabWrap).on('click', '.tab-btn', handleClickEvent);
+			$(tabWrap).on('keydown', '.tab-nav', handleKeyEvent);
 			function handleClickEvent(event) {
 				event = event || window.event;
 				event.stopPropagation();
@@ -38,13 +43,23 @@ $(function () {
 				.attr({
 					'tabindex':'0',
 					'aria-selected':'true'
-				}).focus().parent().addClass('cs_active').siblings()
-					.removeClass('cs_active')
-					.find('button')
+				}).focus().siblings()
 					.attr({
 						'tabindex':'-1',
 						'aria-selected':'false'
 					});
+
+				// $(tab)
+				// .attr({
+				// 	'tabindex':'0',
+				// 	'aria-selected':'true'
+				// }).focus().parent().addClass('cs_active').siblings()
+				// 	.removeClass('cs_active')
+				// 	.find('button')
+				// 	.attr({
+				// 		'tabindex':'-1',
+				// 		'aria-selected':'false'
+				// 	});
 				
 			}
 
@@ -58,7 +73,79 @@ $(function () {
 						.prop('hidden', true)
 			}
 
-			$('.tab-btn:first-of-type > button', tabWrap).trigger('click');
+			function handleKeyEvent(event) {
+				event = event || window.event;
+				event.stopPropagation();
+				var keycode = event.keyCode || event.which;
+
+				switch(keycode) {
+					// 왼쪽방향키
+					case 37:
+						if(event.target.previousElementSibling) {
+							$(event.target)
+								.attr({
+									'tabindex':'-1'
+								})
+								.prev()
+									.attr({
+										'tabindex':'0'
+									})
+									.focus()
+						} else {
+							$(event.target)
+								.attr({
+									'tabindex':'-1'
+								})
+								.siblings(':last')
+									.attr({
+										'tabindex':'0'
+									})
+									.focus()
+						}
+						break;
+						
+					// 오른쪽방향키
+					case 39:
+						console.log("오른쪽");
+						if(event.target.nextElementSibling) {
+							$(event.target)
+								.attr({
+									'tabindex':'-1'
+								})
+								.next()
+									.attr({
+										'tabindex':'0'
+									})
+									.focus()
+						} else {
+							$(event.target)
+								.attr({
+									'tabindex':'-1'
+								})
+								.siblings(':first')
+									.attr({
+										'tabindex':'0'
+									})
+									.focus()
+						}
+						break;
+
+					// 스페이스키
+					case 32:
+					case 13:
+						event.preventDefault();
+						activateTab(event.target);
+						activateTabPanel(event.target);
+						break;
+					// 탭키
+					// case 9:
+					// 	break;
+				}
+
+			}
+
+			// $('.tab-btn:first-of-type > button', tabWrap).trigger('click');
+			$('.tab-btn:first-of-type', tabWrap).trigger('click');
 		}
 
   	}
