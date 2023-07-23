@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/var.css">
+	<link rel="stylesheet" href="../../css/comm.css">
+	<link rel="stylesheet" href="../../css/form.css">
+	<link rel="stylesheet" href="../../css/comp.css">
+	<link rel="stylesheet" href="../../css/popup.css">
+	<link rel="stylesheet" href="../../css/layout.css">
+    <script src="../../js/jquery-3.6.4.min.js"></script>
+    <script src="../../js/common.js"></script>
+</head>
+<body>
+    <section class="wrapper">
+        <header>
+            <div id="header">
+                <div class="header-left">
+                    <button title="뒤로가기"><i class="ic-btn-back"></i></button>
+                </div>
+                <h1>모바일인증서발급</h1>
+                <div class="header-right">
+                    <button title="메인으로"><i class="ic-btn-home"></i></button>
+                    <button title="전체메뉴"><i class="ic-btn-menu"></i></button>
+                </div>
+            </div>
+        </header>
+        <div id="container">
+            <!-- S:contents -->
+            <div class="contents">
+                <!-- S:switch -->
+                <span class="switch">
+                    <input type="checkbox" id="frmSwitch">
+                    <label for="frmSwitch"></label>
+                </span>
+                <!-- S:input -->
+                <input type="text" value="" title="이름입력" placeholder="이름을 입력하세요">
+                <div class="inp-affix-wrap">
+                    <input type="text" value="" title="검색어입력" placeholder="검색어를 입력하세요">
+                    <button>버튼</button>
+                </div>
+                <!-- S:select box -->
+                <div class="custom-select">
+                    <button role="button">셀렉트박스</button>
+                </div>
+                <!-- S:check -->
+                <div class="form-group" style="margin-top:20px;">
+                    <span class="form-check">
+                        <input type="checkbox" id="chk0101">
+                        <label for="chk0101">체크박스</label>
+                    </span>
+                    <span class="form-check">
+                        <input type="checkbox" id="chk0102" checked>
+                        <label for="chk0102">체크박스</label>
+                    </span>
+                    <span class="form-check">
+                        <input type="checkbox" id="chk0103" disabled>
+                        <label for="chk0103">체크박스 비활성화</label>
+                    </span>
+                    <span class="form-check">
+                        <input type="checkbox" id="chk0104" checked disabled>
+                        <label for="chk0104">체크박스</label>
+                    </span>
+                </div>
+
+                <!-- S:radio -->
+                <div class="form-group" style="margin-top:20px;">
+                    <span class="form-check">
+                        <input type="radio" name="rdo01" id="rdo0101">
+                        <label for="rdo0101">라디오버튼</label>
+                    </span>
+                    <span class="form-check">
+                        <input type="radio" name="rdo01" id="rdo0102" checked>
+                        <label for="rdo0102">라디오버튼</label>
+                    </span>
+                    <span class="form-check">
+                        <input type="radio" name="rdo02" id="rdo0103" disabled>
+                        <label for="rdo0103">라디오버튼</label>
+                    </span>
+                    <span class="form-check">
+                        <input type="radio" name="rdo02" id="rdo0104" checked disabled>
+                        <label for="rdo0104">라디오버튼</label>
+                    </span>
+                </div>
+
+                <div class="form-wrap" style="margin-top:20px">
+                    <div class="form-item">
+                        <label for="frmName">이름</label>
+                        <input type="text" id="frmName" title="이름을 입력하세요" placeholder="이름 입력">
+                    </div>
+                    <div class="form-item">
+                        <label class="blind" title="휴대폰 통신사 선택">휴대폰 통신사 선택</label>
+                        <div class="form-group st_button" style="margin-top:20px;">
+                            <span class="form-check">
+                                <input type="radio" name="rdo03" id="rdo0301" checked>
+                                <label for="rdo0301">SKT<br>(알뜰폰 포함)</label>
+                            </span>
+                            <span class="form-check">
+                                <input type="radio" name="rdo03" id="rdo0302">
+                                <label for="rdo0302">KT<br>(알뜰폰 포함)</label>
+                            </span>
+                            <span class="form-check">
+                                <input type="radio" name="rdo03" id="rdo0303">
+                                <label for="rdo0303">LGU+<br>(알뜰폰 포함)</label>
+                            </span>
+                        </div>
+                        <div class="inp-group st_mobile">
+                            <div class="custom-select">
+                                <button type="button">010</button>
+                            </div>
+                            <input type="tel" title="휴대폰번호를 숫자로만 입력해주세요" placeholder="[-]없이 입력">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // E:contents -->
+            <div class="fixed-bottom">fixed bottom</div>
+        </div>
+    </section>
+</body>
+</html>

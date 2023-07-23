@@ -1,0 +1,25 @@
+@charset 'UTF-8';
+
+/* --------------------------
+		wrap
+-------------------------- */
+.wrapper{display:flex;flex-direction:column;height:100vh;}
+
+/* --------------------------
+		header
+-------------------------- */
+#header{padding:0 20px;border-bottom:1px solid var(--line-c01)}
+#header h1{font-weight:500;font-size:17px;color:var(--fc-01);}
+#header{display:flex;justify-content:space-between;align-items:center;height:50px;}
+
+/* --------------------------
+		container
+-------------------------- */
+#container{overflow:auto;display:flex;flex-direction:column;height:100%;}
+#container .contents{overflow:auto;padding:20px 20px 0;height:100%;}
+#container .fixed-bottom{padding:0 20px;min-height:50px;background:#f1f1f1;}
+
+/* --------------------------
+		footer
+-------------------------- */
+footer{min-height:50px;background:lightgray;}

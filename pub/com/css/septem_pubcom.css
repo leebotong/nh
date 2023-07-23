@@ -1,0 +1,229 @@
+@charset "utf-8";
+/* [SEPTEM] UI Dev Team :: 셉템 퍼블리싱가이트 pubcom css */
+
+button,dd,dl,dt,div,span,object,iframe,h1,h2,h3,h4,h5,h6,input,legend,p,select,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,textarea,table,caption,tbody,tfoot,thead,tr,th,td,main, article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;box-sizing:border-box}
+body,button,h1,h2,h3,h4,h5,input,select,table,textarea{font-family:'NanumR';font-size:15px}
+table{border-collapse:collapse}
+img,fieldset,iframe{border:0}
+img{max-width:100%;height:auto}
+ol,ul{list-style:none}
+address,em{font-style:normal}
+a{color:inherit;-webkit-tap-highlight-color:rgba(0,0,0,.1);box-sizing:border-box;cursor:pointer}
+button,input,textarea{-webkit-border-radius:0;border-radius:0}
+button{background-color:transparent;cursor:pointer}
+select{border-radius:0}
+
+table{min-width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;word-break:break-all}
+
+/*
+@font-face {
+	font-family:"basefont";
+	src: local("NanumSquareRoundL"),
+		url('../font/NanumSquareRoundL.woff2') format('woff2'),
+		url('../font/NanumSquareRoundL.woff') format('woff');
+	font-weight: 100;
+}
+
+@font-face {
+	font-family:"basefont";
+	src: local("NanumSquareRoundR"),
+		url('../font/NanumSquareRoundR.woff2') format('woff2'),
+		url('../font/NanumSquareRoundR.woff') format('woff');
+	font-weight: 300;
+} */
+
+@font-face {
+	font-family:"NanumR";
+	src:
+		local("NanumSquareRoundBold"),
+		url('../font/NanumSquareRoundB.woff2') format('woff2'),
+		url('../font/NanumSquareRoundB.woff') format('woff');
+	font-weight:700;
+	font-display:swap;
+}
+
+@font-face {
+	font-family:"NanumR";
+	src:
+		local("NanumSquareRoundExtraBold"),
+		url('../font/NanumSquareRoundEB.woff2') format('woff2'),
+		url('../font/NanumSquareRoundEB.woff') format('woff');
+	font-weight:900;
+	font-display:swap;
+}
+
+::-webkit-scrollbar{width:6px;height:6px;border-left:0;background:#F8F9F9}
+::-webkit-scrollbar-track{background-color:#F8F9F9}
+::-webkit-scrollbar-thumb{background:#ccc;border-radius:3px}
+::-webkit-scrollbar-thumb:hover {background:#999}
+
+body{font-family:'basefont','Malgun Gothic',돋움;font-size:13px;font-weight:300;letter-spacing:-.02em;color:#111}
+@media screen and (-webkit-min-device-pixel-ratio:0){  /* 크롬 */
+	body{font-weight:700}
+}
+input{padding:0 0 0 4px;min-height:28px;font-family:'Malgun Gothic',돋움;font-size:14px;border:0;border-radius:4px;outline:0in}
+
+.skipNav{position:absolute;top:-1px;left:0;right:0;background-color:#333;z-index:100}
+.skipNav a{position:absolute;top:0;left:0;right:0;padding:10px 25px;margin-top:-100px;text-align:center;line-height:1;white-space:nowrap;background:#000}
+.skipNav a:link{color:#333}
+.skipNav a:focus{margin-top:0;text-decoration:underline;color:#fff}
+
+header{font-size:14px;font-weight:bold}
+header .title{display:flex;justify-content:space-between;align-items:center;width:100%;padding:10px 20px;height:50px;background-color:#19a647;color:#fff}
+header .title .search *{font-size:12px}
+header .nhLogo{width:140px}
+.headerTit{margin-left:10px;font-size:16px}
+.headerYear{opacity:.5}
+.menu ul{display:flex}
+.menu ul li{margin-left:40px}
+.menu ul li:first-child{margin-left:0}
+.menu a{position:relative;display:inline-block;height:100%;color:#fff;text-decoration:none}
+.menu .active{font-weight:900}
+.menu .active:after{content:'';position:absolute;left:-4px;right:-4px;bottom:-18px;height:3px;background-color:#fff}
+nav{position:relative}
+.subject{display:flex;align-items:center;font-weight:900}
+.total{display:inline-block;color:#eee;font-size:13px;font-weight:100;margin-left:5px}
+.total:before{content:'| '}
+.gnb{border-bottom:1px solid #eee;overflow-x:auto;cursor:pointer;user-select:none;}
+.gnb ul{display:flex;align-items:center;height:40px;padding:0 20px}
+.gnb li{padding:0 5px}
+.gnb span{padding:0 10px 2px;color:#111;text-decoration:none;word-break:keep-all;white-space:nowrap;user-select:none;
+	/* pointer-events:none */
+}
+.gnb span.active{background-color:#fff568;border-radius:4px}
+.gnb span.on{background-color:#d1d1d1;border-radius:4px}
+.gnb span.active.on{background-color:#fff568}
+
+footer{height:30px;line-height:30px;text-align:center;background-color:#fafafa;color:#888}
+.top{position:fixed;right:20px;bottom:40px;width:40px;height:40px;background:url('../images/top_circle.svg') 0 0/cover #fff;border:0;border-radius:49%}
+
+/* --------------------
+	퍼블리스트
+-------------------- */
+header{position:fixed;top:0;left:0;right:0;z-index:99;background-color:#fff}
+header input{height: 26px;padding:0 10px;border: 1px solid #ffffff;border-radius:18px;background: #fff;color: #000;}
+header input::placeholder{color:#ddd}
+header input[type="date"]{width:130px}
+::-webkit-calendar-picker-indicator{margin-left:0}
+#tableSearch{margin-left:20px;width:220px}
+
+#main{display:block;min-height:calc(100vh - 30px);padding:110px 20px 40px}
+
+.dataTables_wrapper .dataTables_filter{float:none;position:absolute;top:-104px;left:50%;margin-left:-150px}
+.dataTables_wrapper .dataTables_filter input{padding-left:30px;width:300px;height:26px;border-radius:20px;border-color:#82ce9b;color:#fff;font-size:13px}
+.dataTables_wrapper .dataTables_filter input:focus{outline:1px solid #fff}
+.dataTables_filter{display:none}
+.dataTables_filter label{position:relative;font-size:0}
+.dataTables_filter label:before{content:'';position:absolute;top:-10px;left:8px;width:19px;height:19px;background:url('../images/icon_search.png') left center/cover no-repeat}
+table.dataTable{margin-bottom:30px}
+
+table{width:100%;font-size:12px;}
+table.dataTable.compact caption {padding-bottom:14px;text-align:left;font-size:16px;font-weight:900}
+table.dataTable.compact thead th{padding:4px 6px;color:#000;font-weight:900;border-bottom:1px solid #111;border-top:2px solid #555}
+table.dataTable.compact tbody td{padding:4px 6px;border:1px solid #eee;border-width:1px 0 0 1px;color:#505652;line-height:1.4em}
+table.dataTable.compact thead th:first-child,
+table.dataTable.compact tbody td:first-child{border-left:0}
+table.dataTable.compact .path a{color:#111;text-decoration:underline}
+table.dataTable.compact tbody tr.bdt th,table.dataTable.compact tbody tr.bdt td{border-top:2px solid #000}
+
+table th:nth-child(1){width:40px}
+table th:nth-child(6){/* width:84px */}
+table th:nth-child(8){width:80px} /* 년도 */
+table th:nth-child(9){width:80px} /* 최근수정일 */
+table th:nth-child(10){width:54px} /* 작업자 */
+table td:nth-child(1), table td:nth-child(8), table td:nth-child(9),  table td:nth-child(10){text-align:center}
+
+table.dataTable.compact td.date{line-height:1}
+table td.date em{display:block;margin-bottom:0px}
+table td.date span{display:inline-block;margin-right:2px;width:12px;height:6px;border:1px solid #ddd;border-radius:4px;font-size:0;cursor:pointer}
+table td.date span.active{border-color:#aaa}
+table .del td.date span.active{border-color:#ddd}
+table td.date span:hover{border-color:#111}
+table td.date span.today{background-color:red}
+table td.no a{color:#555;text-decoration:none}
+table td.name span{display:block}
+table td.etc{word-break:break-all}
+table td.etc p{position:relative;padding-left:7px;}
+table td.etc p:before{content:'';position:absolute;top:6px;left:0;width:3px;height:3px;background:#dcdcdc;border-radius:50%}
+table td.etc p+p{margin-top:2px}
+
+table tr.del td, table tr.del td a{text-decoration:line-through;color:#ccc !important}
+table td .new, table td .edit, table td .safe, table td .comm {display:inline-block;position:relative}
+table td .new:after, table td .edit:after, table td .safe:after, table td .comm:after {content:'';position:absolute;bottom:3px;left:0px;right:0px;height:6px;opacity:.25;background-color:#19a647} /*신규*/
+table td .edit:after {background-color:#ffd800} /*수정*/
+table td .safe:after {background-color:#046FD9} /*유지*/
+table td .comm:after {background-color:#a108b5} /*공통*/
+table td .err {color:#ff0000} /*확인필요*/
+
+table tbody tr:hover>.sorting_1, table.dataTable.order-column.hover tbody tr:hover>.sorting_1,
+table.dataTable.hover tbody tr:hover, table tbody tr:hover{background-color: #e7f9f7 !important}
+table tbody tr.focus>.sorting_1, table.dataTable.order-column.hover tbody tr.focus>.sorting_1,
+table.dataTable.hover tbody tr.focus, table tbody tr.focus{background-color: #ffe8e8 !important}
+
+table tr.dev td, table tr.dev td a, table tr.dev td a:hover{background:#ffffe7;}
+table tr.dev td.path:after{display:inline-block;content:'수정반영필요';background:red;color:#fff;padding:5px;border-radius:5px;margin-left:10px;font-size:12px;}
+table.dataTable.display tbody tr.dev>.sorting_1, table.dataTable.order-column.stripe tbody tr.dev>.sorting_1{background:#ffffe7 !important;}
+.pubList{position:relative;}
+.icoDev{background:red;color:#fff;padding:5px;border-radius:5px;margin-left:10px;font-size:12px;}
+.pubList .infoTxtBox{position:absolute;top:90px;left:calc(50% - 323px);padding:15px;background:#fff;}
+.pubList .infoTxt{color:red;font-weight:700;font-size:16px;}
+
+/* #cboxWrapper{-webkit-transform:initial !important} */
+/* #colorbox, #cboxOverlay, #cboxWrapper{overflow:visible !important} */
+#cboxOverlay{background:#000}
+#cboxContent{background:none}
+#cboxLoadedContent{padding:0;box-shadow:0 0 30px 0 #00000036;background:#fff;border-radius:10px;border:1px solid #fff}
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose{top:-25px;border-radius:50%;box-shadow:0 0 30px 0 #00000036}
+#cboxTitle{top:-25px;right:68px}
+#cboxTitle>span{position:fixed;top:0;left:0;right:0;padding:0 14px 0 5px;height:26px;line-height:26px;background:#000;color:#fff;text-align:center}
+.colorBtn{position:absolute;right:0;padding:0 10px;height:20px;line-height:20px;background-color:#fff;text-decoration:none;border-radius:15px;color:#555;font-weight:900;box-shadow:0 0 30px 0 #00000036}
+.colorBtn:hover{color:#000}
+.pathTxt{margin-right:6px;padding:2px 10px;border-radius:20px;background-color:#fff568;color:#111}
+/* .depthTxt{color:#111} */
+.resizeBtn{position:fixed;top:26px;left:0;right:0;height:26px;line-height:26px;background-color:#555;text-align:center}
+.resizeBtn button{margin-right:5px;padding:0 4px;height:20px;line-height:20px;font-size:13px;border:0;color:#fff}
+.resizeBtn button.active{text-decoration:underline;color:#fff568}
+
+.previewIframe{position:fixed;top:0;right:0;width:360px;height:640px;background-color:#fff;border:1px solid #000;box-sizing:content-box;z-index:5000}
+
+@media only screen and (max-width: 1280px) {
+	.nhLogo, .headerYear, .dataFilter {display:none}
+}
+@media only screen and (max-width: 900px) {
+	.total,
+	table th:nth-child(11), table td:nth-child(11)
+	{display:none}
+}
+@media only screen and (max-width: 600px) {
+	.search,
+	.pubList table th:nth-child(2), .pubList table td:nth-child(2),
+	.pubList table th:nth-child(3), .pubList table td:nth-child(3),
+	.pubList table th:nth-child(4), .pubList table td:nth-child(4),
+	.pubList table th:nth-child(5), .pubList table td:nth-child(5),
+	.pubList table th:nth-child(8), .pubList table td:nth-child(8),
+	.pubList table th:nth-child(9), .pubList table td:nth-child(9),
+	.pubList table th:nth-child(10), .pubList table td:nth-child(10),
+	.previewIframe
+	{display:none}
+	#cboxTitle{font-size:11px}
+	#cboxTitle{text-align:left}
+	.colorBtn{bottom: -16px;padding:3px 8px 2px;line-height: 15px}
+	.resizeBtn{display:none}
+}
+/* --------------------
+	퍼블가이드
+-------------------- */
+
+/* --------------------
+	이미지리스트
+-------------------- */
+.cmImages ul{display:flex;width:100%;flex-wrap:wrap;border-top:1px solid #ddd;border-left:1px solid #ddd;}
+.cmImages li{flex:none;width:20%;border:1px solid #ddd;border-left:none;border-top:none}
+.cmImages li a{text-decoration:none;color:#888}
+.cmImages li .img{display:flex;align-items:center;justify-content:center;height:100px;background:#f7f7f7}
+.cmImages li div{padding:10px;text-align:center}
+.cmImages li .img img{max-height:100px}
+.cmImages .imgTit{line-height:30px;font-size:15px;font-weight:900;border:1px solid #ddd;border-bottom:none;text-align:center;background-color:#ddd;border:1px solid #ccc}
+@media only screen and (max-width: 700px) {
+	.cmImages li{flex:none;width:50%}
+}

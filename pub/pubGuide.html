@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NH모바일인증서발급 || 셉템 가이드 시스템</title>
+	<!-- <meta http-equiv="Cache-Control" content="no-store"> -->
+	<meta name="publisher" content="[SEPTEM] UI Dev Team">
+	<link rel="stylesheet" href="com/css/datatables.min.css">
+	<link rel="stylesheet" href="com/css/colorbox.css">
+	<link rel="stylesheet" href="com/css/septem_pubcom.css">
+	<script src="com/js/jquery-3.6.0.min.js"></script>
+	<!-- <script src="com/js/jquery-1.12.4.min.js"></script> -->
+</head>
+<body>
+
+<div class="skipNav">
+	<a href="#main">본문 바로가기</a>
+	<a href="#gnb">메뉴 바로가기</a>
+</div>
+
+<header>
+	<div class="title">
+		<div class="subject">
+			<img src="com/images/guide_logo_nh.svg" alt="NH Bank, NH 농협" class="nhLogo">
+			<span class="headerTit"><em class="headerYear">UI/UX Guide SYSTEM</em> <em class="prj">2023 NH모바일인증서발급</em></span>
+		</div>
+		<div class="search">
+			<input type="text" id="tableSearch" placeholder="검색어입력">
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="pubList.html">퍼블리스트</a></li>
+				<li><a href="pubGuide.html" title="선택됨" class="active">UI가이드</a></li>
+				<li><a href="pubImage.html">이미지리스트</a></li>
+			</ul>
+		</div>
+	</div>
+	<nav class="gnb">
+		<ul>
+			<!-- gnb는 depth1로 자동생성됩니다. -->
+			<li><span class="active">전체보기</span></li>
+		</ul>
+	</nav>
+</header>
+
+<main id="main" class="pubGuide">
+	<table class="display compact">
+		<caption>UI Component</caption>
+		<thead>
+			<tr>
+				<th>No</th>
+				<th>이름</th>
+				<th>링크</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>layout</td>
+				<td class="path">
+					<a href="sample/layout_main.html" target="_blank">layout_main.html</a> /
+					<a href="sample/layout_sub.html" target="_blank">layout_sub.html</a>
+				</td>
+			</tr>
+			<tr>
+				<td>popup</td>
+				<td class="path">
+					<a href="sample/popup.html" target="_blank">popup.html</a> /
+					<a href="sample/popup_full.html" target="_blank">popup_full.html</a> /
+					<a href="sample/popup_bottom.html" target="_blank">popup_bottom.html</a>
+				</td>
+			</tr>
+			<tr>
+				<td>Typhography</td>
+				<td class="path"><!-- <a href="sample/typho.html" target="_blank">typho.html</a> --></td>
+			</tr>
+			<tr>
+				<td>Button</td>
+				<td class="path"><a href="sample/button.html" target="_blank">button.html</a></td>
+			</tr>
+			<tr>
+				<td>Tab</td>
+				<td class="path"><a href="sample/tab.html" target="_blank">tab.html</a></td>
+			</tr>
+			<tr>
+				<td>Form(input, checkbox, radio, select box, textarea)</td>
+				<td class="path">
+					<a href="sample/form.html" target="_blank">form.html</a>
+				</td>
+			</tr>
+			<tr>
+				<td>Toggle</td>
+				<td class="path"><!-- <a href="sample/toggle.html" target="_blank">toggle.html</a> --></td>
+			</tr>
+			<!-- <tr>
+				<td>약관</td>
+				<td class="path"><a href="sample/terms.html" target="_blank">terms.html</a></td>
+			</tr>
+			<tr>
+				<td>리스트</td>
+				<td class="path"><a href="sample/list.html" target="_blank">list.html</a></td>
+			</tr>
+			<tr>
+				<td>조회리스트</td>
+				<td class="path"><a href="sample/list2.html" target="_blank">list2.html</a></td>
+			</tr>
+			<tr>
+				<td>계좌리스트</td>
+				<td class="path">
+					<a href="sample/account3.html" target="_blank">account3.html</a>
+				</td>
+			</tr>
+			<tr>
+				<td>테이블</td>
+				<td class="path"><a href="sample/table.html" target="_blank">table.html</a></td>
+			</tr>
+			<tr>
+				<td>컨펌메세지</td>
+				<td class="path"><a href="sample/finish.html" target="_blank">finish.html</a></td>
+			</tr>
+			<tr>
+				<td>컨펌메세지</td>
+				<td class="path"><a href="sample/confirm.html" target="_blank">confirm.html</a></td>
+			</tr>
+			<tr>
+				<td>팝업</td>
+				<td class="path">
+					<a href="sample/cokpopup.html" target="_blank">cokpopup.html</a>
+				</td>
+			</tr>
+			<tr>
+				<td>공통요소</td>
+				<td class="path"><a href="sample/etc.html" target="_blank">etc.html</a></td>
+			</tr>
+			<tr>
+				<td>차트(라이브러리 미정)</td>
+				<td class="path"><a href="sample/chart.html" target="_blank">chart.html</a></td>
+			</tr>
+			<tr>
+				<td>그래프(기존 금리 안내 차트)</td>
+				<td class="path"><a href="sample/graph.html" target="_blank">graph.html</a></td>
+			</tr>
+			<tr>
+				<td>배너(미정)</td>
+				<td class="path"><a href="sample/banner.html" target="_blank">banner.html</a></td>
+			</tr>
+			<tr>
+				<td>풀팝업</td>
+				<td class="path"><a href="sample/fullpop.html" target="_blank">fullpop.html</a></td>
+			</tr> -->
+		</tbody>
+	</table>
+</main>
+
+<footer>
+	<button title="상단으로" class="top"></button>
+	<address>Copyright © NH Bank. All Rights Reserved.</address>
+</footer>
+
+<script src="com/js/datatables.min.js"></script>
+<script src="com/js/jquery.colorbox-min.js"></script>
+<script src="com/js/septem_pubcom.js"></script>
+
+</body>
+</html>
