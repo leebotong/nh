@@ -34,7 +34,7 @@ $(function () {
 
     	// 인풋
 		jsInp: function () {
-			$(".input-text-wrap :where(input, button)").focus(function () {
+			$(".input-text-wrap :where(input, button)").on('focus, focusin', function () {
 				$(this).parent().addClass("st_focus");
 			}).blur(function () {
 				$(this).parent().removeClass("st_focus");
@@ -226,12 +226,22 @@ $(function () {
 				$this.addClass('active')
 				.attr('aria-expanded', true)
 				.closest('.js_toggle_item').find('.js_toggle_cont')
-				.slideDown(200)
+				.slideDown(200, function () {
+                    var $inputText = $(this).find('input[type=text]');
+                    if ($inputText.length > 0) {
+                        $inputText.focus();
+                    }
+                });
 			} else {
 				$this.removeClass('active')
 				.attr('aria-expanded', false)
 				.closest('.js_toggle_item').find('.js_toggle_cont')
-				.slideUp(200)
+				.slideUp(200, function () {
+                    var $inputText = $(this).find('input[type=text]');
+                    if ($inputText.length > 0) {
+                        $inputText.blur();
+                    }
+                });
 			}
 		})
 
