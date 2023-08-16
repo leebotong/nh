@@ -1,0 +1,7 @@
+<svg id="ico_menu_close" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g id="area" transform="translate(-1377 -429)" opacity="0">
+    <rect id="areaOut" width="48" height="48" transform="translate(1377 429)" fill="red" opacity="0.102"/>
+    <rect id="areaIn" width="40" height="40" transform="translate(1381 433)" fill="#ff4848" opacity="0.302"/>
+  </g>
+  <path id="ico_close" d="M1414.227,467.849,1401,454.621l-13.228,13.228a1.5,1.5,0,0,1-2.121-2.121l13.228-13.228-13.228-13.228a1.5,1.5,0,0,1,2.121-2.121L1401,450.378l13.228-13.228a1.5,1.5,0,0,1,2.122,2.121L1403.121,452.5l13.228,13.228a1.5,1.5,0,0,1-2.122,2.121Z" transform="translate(-1377 -429)" fill="#111"/>
+</svg>

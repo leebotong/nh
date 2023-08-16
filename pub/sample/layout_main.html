@@ -10,29 +10,34 @@
 	<link rel="stylesheet" href="../../css/comm.css">
 	<link rel="stylesheet" href="../../css/form.css">
 	<link rel="stylesheet" href="../../css/comp.css">
-	<link rel="stylesheet" href="../../css/popup.css">
 	<link rel="stylesheet" href="../../css/layout.css">
     <script src="../../js/jquery-3.6.4.min.js"></script>
     <script src="../../js/common.js"></script>
 </head>
 <body>
-    <section class="wrapper">
+    <div id="wrap">
         <header>
             <div id="header">
                 <div class="header-left">
-                    <button title="뒤로가기"><i class="ic-btn-back"></i></button>
+                    <a href="#" class="btn-header-back" aria-label="이전화면으로 가기"></a>
                 </div>
-                <h1>모바일인증서발급</h1>
+                <h1>NH모바일인증서발급</h1>
                 <div class="header-right">
-                    <button title="메인으로"><i class="ic-btn-home"></i></button>
-                    <button title="전체메뉴"><i class="ic-btn-menu"></i></button>
+                    <a href="#" class="btn-header-home" aria-label="메인으로 가기"></a>
+                    <button type="button" class="btn-header-menu" aria-label="전체메뉴" aria-haspopup="menu"></button>
                 </div>
             </div>
         </header>
         <div id="container">
-            <div class="contents"><p style="height:600px">contents</p></div>
-            <div class="fixed-bottom">fixed bottom</div>
+            <div id="contents">
+                <p style="height:2000px">contents</p>
+            </div>
+            <div id="bottom">
+                <div class="btn-wrap">
+                    <button type="button" class="btn btn-large btn-primary">확인</button>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 </body>
 </html>

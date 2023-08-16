@@ -1,0 +1,9 @@
+<svg id="ico_input_delete" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="btn_ico_input_close" data-name="btn / ico_input_close" transform="translate(-544 -1343)" style="mix-blend-mode: normal;isolation: isolate">
+    <rect id="area" width="36" height="36" transform="translate(544 1343)" fill="red" opacity="0"/>
+    <g id="ico_툴팁_sel">
+      <circle id="타원_1" data-name="타원 1" cx="18" cy="18" r="18" transform="translate(544 1343)" fill="#f1f1f1" opacity="0.941"/>
+      <path id="Union_1" data-name="Union 1" d="M351.188-3914.583,346-3909l5.188-5.583L346-3920.167l5.188,5.584,5.188-5.584-5.188,5.584,5.188,5.583Z" transform="translate(210.812 5275.583)" fill="none" stroke="#7e858e" stroke-linecap="square" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

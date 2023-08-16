@@ -10,47 +10,47 @@
 	<link rel="stylesheet" href="../../css/comm.css">
 	<link rel="stylesheet" href="../../css/form.css">
 	<link rel="stylesheet" href="../../css/comp.css">
-	<link rel="stylesheet" href="../../css/popup.css">
 	<link rel="stylesheet" href="../../css/layout.css">
     <script src="../../js/jquery-3.6.4.min.js"></script>
     <script src="../../js/common.js"></script>
 </head>
 <body>
-    <section id="wrapper">
+    <div id="wrap">
         <header>
             <div id="header">
                 <div class="header-left">
-                    <button title="뒤로가기"><i class="ic-btn-back"></i></button>
+                    <a href="#" class="btn icon-only ic-back" aria-label="이전화면으로 가기"></a>
                 </div>
-                <h1>모바일인증서발급</h1>
+                <h1>NH모바일인증서발급</h1>
                 <div class="header-right">
-                    <button title="메인으로"><i class="ic-btn-home"></i></button>
-                    <button title="전체메뉴"><i class="ic-btn-menu"></i></button>
+                    <a href="#" class="btn icon-only ic-home" aria-label="메인으로 가기"></a>
+                    <button type="button" aria-haspopup="menu" class="btn icon-only ic-menu" aria-label="전체메뉴"></button>
                 </div>
             </div>
         </header>
         <div id="container">
-            <!-- S:contents -->
-            <div class="contents">
+            <div id="contents">
+                <!-- S:contents -->
                 <div class="tab">
-                    <div class="tab-nav" role="tablist" aria-label="탭제목">
-                        <!-- <div class="tab-btn cs_active"><button role="tab" id="tab-btn-01" aria-selected="true" aria-controls="tab-panel-01">Tab 1</button></div>
-                        <div class="tab-btn"><button role="tab" id="tab-btn-02" aria-selected="false" aria-controls="tab-panel-02">Tab 2</button></div>
-                        <div class="tab-btn"><button role="tab" id="tab-btn-03" aria-selected="false" aria-controls="tab-panel-03">Tab 3</button></div> -->
-                        <button role="tab" id="tab-btn-01" class="tab-btn" aria-selected="true" aria-controls="tab-panel-01">Tab 1</button>
-                        <button role="tab" id="tab-btn-02" class="tab-btn" aria-selected="false" aria-controls="tab-panel-02">Tab 2</button>
-                        <button role="tab" id="tab-btn-03" class="tab-btn" aria-selected="false" aria-controls="tab-panel-03">Tab 3</button>
+                    <div class="tab-nav" role="tablist">
+                        <button class="tab-btn" role="tab" aria-selected="true"><span>Tab 1</span></button>
+                        <button class="tab-btn" role="tab" aria-selected="false"><span>Tab 2</span></button>
+                        <button class="tab-btn" role="tab" aria-selected="false"><span>Tab 3</span></button>
                     </div>
                     <div class="tab-container">
-                        <div id="tab-panel-01" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-01">Content 1</div>
-                        <div id="tab-panel-02" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-02">Content 2</div>
-                        <div id="tab-panel-03" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-03">Content 3</div>
+                        <div class="tab-panel" role="tabpanel">Content 1</div>
+                        <div class="tab-panel" role="tabpanel">Content 2</div>
+                        <div class="tab-panel" role="tabpanel">Content 3</div>
                     </div>
                 </div>
+                <!-- S:contents -->
             </div>
-            <!-- // E:contents -->
-            <div class="fixed-bottom">fixed bottom</div>
+            <div id="bottom">
+                <div class="btn-wrap">
+                    <button type="button" class="btn btn-large btn-primary">확인</button>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 </body>
 </html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../css/cont.css">
+	<link rel="stylesheet" href="../css/form.css">
+	<link rel="stylesheet" href="../css/comp.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <!-- S : contents-->
+            <div id="contents">
+                <div class="result-wrap">
+                    <p class="big-title">NH모바일인증서가 <br>폐지 되었습니다</p>
+                    <p class="desc"><span class="point-txt">인증서를 폐지</span>하신 이유를 알려주세요.</p>
+                </div>
+
+                <ul class="list-type-card reasons js_selected">
+                    <li>
+                        <div class="inner">
+                            <span class="form-check-line bold">
+                                <input type="checkbox" id="chk0101">
+                                <label for="chk0101">인증서가 필요 없습니다.</label>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="form-check-line bold">
+                                <input type="checkbox" id="chk0102">
+                                <label for="chk0102">타 은행 인증서를 사용하고 있습니다.</label>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="form-check-line bold">
+                                <input type="checkbox" id="chk0103">
+                                <label for="chk0103">NH모바일인증서를 자주 사용하지 않습니다.</label>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="form-check-line bold">
+                                <input type="checkbox" id="chk0104">
+                                <label for="chk0104">다른(금융,공동) 인증서를 사용하고 있습니다.</label>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner js_toggle">
+                            <div class="js_toggle_item">
+                                <span class="form-check-line bold">
+                                    <input type="checkbox" id="chk0105">
+                                    <label for="chk0105" class="js_trigger">기타</label>
+                                </span>
+                                <div class="js_toggle_cont" hidden>
+                                    <label class="blind" for="frmEtc">기타이유</label>
+                                    <div class="input-text-wrap">
+                                        <input type="text" id="frmEtc" placeholder="직접입력">
+                                        <button role="button" class="btn-input-clear" aria-label="입력어삭제"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- // E : contents-->
+            <div id="bottom">
+                <div class="btn-wrap">
+                    <button type="button" class="btn btn-large btn-primary">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

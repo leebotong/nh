@@ -1,0 +1,6 @@
+<svg id="more" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <rect id="area" width="60" height="60" fill="red" opacity="0"/>
+  <g id="UI_Icon_16_menu2" data-name="UI/Icon/16_menu2" transform="translate(-2346 -271)">
+    <path id="Color_Overlay" data-name="Color Overlay" d="M2471,309a3,3,0,1,1,3,3A3,3,0,0,1,2471,309Zm0-12a3,3,0,1,1,3,3A3,3,0,0,1,2471,297Zm0-12a3,3,0,1,1,3,3A3,3,0,0,1,2471,285Z" transform="translate(-98 4)" fill="#fff"/>
+  </g>
+</svg>

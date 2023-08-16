@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../css/cont.css">
+	<link rel="stylesheet" href="../css/form.css">
+	<link rel="stylesheet" href="../css/comp.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div id="header">
+                <div class="header-left">
+                    <a href="#" class="btn-header-back" aria-label="이전화면으로 가기"></a>
+                </div>
+                <div class="header-right">
+                    <button type="button" class="btn btn-text">취소</button>
+                </div>
+            </div>
+        </header>
+        <div id="container">
+            <!-- S : contents-->
+            <div id="contents">
+                <!-- S : step -->
+                <div class="step">
+                    <div class="step-bar" data-total="4" data-step="3">
+                        <span class="step-status"></span>
+                    </div>
+                    <div class="step-num">
+                        <span class="total"></span>
+                        <span class="now"></span>
+                    </div>
+                </div>
+                <!-- // E : step -->
+
+                <p class="big-title">
+                    계좌 인증을 <br>진행해 주세요
+                    <button type="button" class="btn-icon btn-help" aria-label="도움말" aria-haspopup="dialog"></button>
+                </p>
+
+                <!-- S : form -->
+                <div class="form-wrap">
+                    <div class="form-item">
+                        <label for="frmBank">은행명</label>
+                        <div class="custom-select">
+                            <a href="#" class="selector" role="button" id="frmBank" aria-haspopup="listbox">
+                                <div class="select-item">
+                                    <img src="../img/logo/logo_nh.png" alt="NH농협로고">
+                                    <span>NH농협</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label for="frmAccount">계좌번호</label>
+                        <div class="input-text-wrap">
+                            <input type="text" id="frmAccount" placeholder="계좌번호 입력">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label for="frmPw">계좌 비밀번호</label>
+                        <div class="input-text-wrap">
+                            <input type="password" id="frmPw" maxlength="4" placeholder="숫자 4자리 입력">
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label for="frmWorker">권유직원<span class="option">(선택사항)</span></label>
+                        <div class="input-text-wrap">
+                            <input type="text" id="frmWorker" value="" readonly>
+                            <button type="button" class="btn btn-small btn-line" aria-haspopup="dialog">조회</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- // E : form -->
+            </div>
+            <!-- // E : contents-->
+            <div id="bottom">
+                <div class="btn-wrap">
+                    <button type="button" class="btn btn-large btn-primary" disabled>다음</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

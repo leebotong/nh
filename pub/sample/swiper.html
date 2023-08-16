@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/var.css">
+	<link rel="stylesheet" href="../../css/comm.css">
+	<link rel="stylesheet" href="../../css/form.css">
+	<link rel="stylesheet" href="../../css/comp.css">
+	<link rel="stylesheet" href="../../css/layout.css">
+    <script src="../../js/jquery-3.6.4.min.js"></script>
+	<script src="../../js/swiper-bundle.min.js"></script>
+    <script src="../../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div id="header">
+                <div class="header-left">
+                    <a href="#" class="btn icon-only ic-back" aria-label="이전화면으로 가기"></a>
+                </div>
+                <h1>NH모바일인증서발급</h1>
+                <div class="header-right">
+                    <a href="#" class="btn icon-only ic-home" aria-label="메인으로 가기"></a>
+                    <button type="button" aria-haspopup="menu" class="btn icon-only ic-menu" aria-label="전체메뉴"></button>
+                </div>
+            </div>
+        </header>
+        <div id="container">
+            <div id="contents">
+                <!-- swiper -->
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">Slide 1</div>
+                      <div class="swiper-slide">Slide 2</div>
+                      <div class="swiper-slide">Slide 3</div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <div class="swiper-pagination"></div>
+                  
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                </div>
+                <!-- //swiper -->
+
+                <script>
+                    $(".swiper").each(function (idx) {
+                        var $this = $(this);
+                        $this.addClass("type" + idx);
+                        
+                        var swiper = new Swiper(".swiper", {
+                            loop:true,
+                            centeredSlides: true,
+                            observer: true,
+                            observeParents: true,
+                            
+                            navigation: {
+                                nextEl: ".swiper-button-next",
+                                prevEl: ".swiper-button-prev",
+                            },
+                            pagination: {
+                                el: ".swiper-pagination",
+                                clickable: true,
+                            },
+                            on: {
+                                init: function () {
+                                    $this.find(".swiper-slide").attr("aria-hidden", true).removeAttr("tabindex");
+                                    $this.find(".swiper-slide.swiper-slide-active")
+                                    .attr({
+                                        "aria-hidden":false,
+                                        "tabindex":0
+                                    })
+                                },
+                                slideChangeTransitionEnd: function () {
+                                    $this.find(".swiper-slide").attr("aria-hidden", true).removeAttr("tabindex");
+                                    $this.find(".swiper-slide.swiper-slide-active")
+                                    .attr({
+                                        "aria-hidden":false,
+                                        "tabindex":0
+                                    })
+                                },
+                            },
+                            // 웹접근성
+                            a11y: {
+                                enabled: true,
+                                prevSlideMessage: '이전 슬라이드',
+                                nextSlideMessage: '다음 슬라이드',   
+                                slideLabelMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
+                                paginationBulletMessage: '{{index}}번 슬라이드'
+                            },
+                        });
+                    });
+                </script>
+            </div>
+            <div id="bottom">
+                <div class="btn-wrap">
+                    <button type="button" class="btn btn-large btn-primary">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -10,43 +10,103 @@
 	<link rel="stylesheet" href="../../css/comm.css">
 	<link rel="stylesheet" href="../../css/form.css">
 	<link rel="stylesheet" href="../../css/comp.css">
-	<link rel="stylesheet" href="../../css/popup.css">
 	<link rel="stylesheet" href="../../css/layout.css">
     <script src="../../js/jquery-3.6.4.min.js"></script>
     <script src="../../js/common.js"></script>
-    <script src="../../js/test.js"></script>
 </head>
 <body>
-    <section class="wrapper">
+    <div id="wrap">
         <header>
             <div id="header">
                 <div class="header-left">
-                    <button title="뒤로가기"><i class="ic-btn-back"></i></button>
+                    <a href="#" class="btn icon-only ic-back" aria-label="이전화면으로 가기"></a>
                 </div>
-                <h1>모바일인증서발급</h1>
+                <h1>NH모바일인증서발급</h1>
                 <div class="header-right">
-                    <button title="메인으로"><i class="ic-btn-home"></i></button>
-                    <button title="전체메뉴"><i class="ic-btn-menu"></i></button>
+                    <a href="#" class="btn icon-only ic-home" aria-label="메인으로 가기"></a>
+                    <button type="button" aria-haspopup="menu" class="btn icon-only ic-menu" aria-label="전체메뉴"></button>
                 </div>
             </div>
         </header>
         <div id="container">
-            <!-- S:contents -->
-            <div class="contents">
-                <ul class="accordion-wrap js_toggle">
-                    <li>
-                        <button type="button" role="heading" aria-level="3" aria-expanded="true" class="trigger">아코디언 스타일 1</button>
-                        <div class="toggle-cont">컨텐츠 1</div>
+            <div id="contents">
+                <div class="collapse st_button">
+                    <div class="collapse-item">
+                        <button type="button" class="collapse-title js_trigger">토글버튼</button>
+                        <div class="collapse-cont">
+                            <div class="inner">어쩌구 저쩌구 어쩔시구 저쩔시구</div>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="collapse">
+                    <li class="collapse-item">
+                        <button type="button" class="collapse-title js_trigger">collapse title 1</button>
+                        <div class="collapse-cont">
+                            <div class="inner">collapse content 11</div>
+                        </div>
                     </li>
-                    <li>
-                        <button type="button" role="heading" aria-level="3" aria-expanded="false" class="toggle-btn">아코디언 스타일 2</button>
-                        <div class="toggle-cont" hidden>컨텐츠 2</div>
+                    <li class="collapse-item">
+                        <button type="button" class="collapse-title js_trigger">collapse title 2</button>
+                        <div class="collapse-cont">
+                            <div class="inner">collapse content 12</div>
+                        </div>
                     </li>
                 </ul>
+
+                <ul class="collapse">
+                    <li class="collapse-item">
+                        <button type="button" class="collapse-title js_trigger">collapse title 21</button>
+                        <div class="collapse-cont">
+                            <div class="inner">collapse content 21</div>
+                        </div>
+                    </li>
+                    <li class="collapse-item">
+                        <button type="button" class="collapse-title js_trigger">collapse title 22</button>
+                        <div class="collapse-cont">
+                            <div class="inner">collapse content 22</div>
+                        </div>
+                    </li>
+                </ul>
+                <br>
+
+                <div class="terms-wrap">
+                    <div class="collapse">
+                        <div class="collapse-item">
+                            <div class="form-check">
+                                <input type="checkbox" id="chk0101">
+                                <label for="chk0101" class="js_trigger active">체크박스 all</label>
+                            </div>
+                            <ul class="collapse-cont">
+                                <li>
+                                    <span class="form-check">
+                                        <input type="checkbox" id="chk0102">
+                                        <label for="chk0102">체크박스 1</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="form-check">
+                                        <input type="checkbox" id="chk0103">
+                                        <label for="chk0103">체크박스 2</label>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="form-check">
+                                        <input type="checkbox" id="chk0104">
+                                        <label for="chk0104">체크박스 3</label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- // E:contents -->
-            <div class="fixed-bottom">fixed bottom</div>
+            <div id="bottom">
+                <div class="btn-wrap">
+                    <button type="button" class="btn btn-large btn-primary">확인</button>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 </body>
 </html>

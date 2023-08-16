@@ -1,0 +1,92 @@
+@charset 'UTF-8';
+
+.gray-box{border-radius:var(--box-radius);background:var(--bg-c02);}
+
+.exam-img{padding:13px 0;text-align:center;}
+.exam-img img{max-width:312px;width:100%;}
+.exam-img .desc{margin-top:10px;color:var(--fc-04);}
+
+.ic-finger-print::before,
+.ic-pattern::before{content:'';display:inline-block;margin-right:8px;width:30px;height:30px;border-radius:12px;background-color:#f1f1f1;vertical-align:middle;}
+.ic-finger-print::before{background-image:url('../img/ic_finger_print.svg');background-position:center;}
+.ic-pattern::before{background-image:url('../img/ic_pattern.svg');}
+
+/* 휴대단말기 등록 */
+.device-regist{display:flex;flex-direction:column;min-height:100%;}
+.device-regist .txt-sub{margin-top:20px;font-size:1.5rem;color:var(--fc-03);}
+.device-regist .img-wrap{display:flex;flex:1;flex-direction:column;justify-content:center;align-items:center;text-align:center;}
+.device-regist .img-wrap img{max-width:312px;width:100%;}
+.device-regist .img-wrap .desc{margin-top:-10px;}
+
+/* 전체약관동의 */
+.big-title + .terms-wrap{margin-top:24px;}
+.terms-wrap{overflow:hidden;border:1px solid #ebebeb;border-radius:4px;}
+.terms-header{padding:11px 15px;background:#f9f9f9;line-height:1;}
+.terms-header label{font-weight:500;font-size:1.6rem;}
+.terms-list li{display:flex;justify-content:space-between;align-items:center;padding:11px 15px;border-top:1px solid #ebebeb;color:var(--fc-01);line-height:1;}
+.terms-list label{font-size:1.4rem;}
+.terms-list input[type=checkbox] + label::before{border:none;background:none;}
+.terms-list input[type=checkbox] + label::after{background:#bbb;}
+.terms-list input[type=checkbox]:checked + label::before{background:none;}
+.terms-list input[type=checkbox]:checked + label::after{background-color:var(--col-primary);}
+
+/* 주 인증서 설정 */
+.swiper-certification{margin:40px -24px 0;}
+.swiper-certification .swiper-wrapper{height:auto;}
+.swiper-certification .swiper-slide{width:50%;padding-bottom:50px;opacity:.3;}
+.swiper-certification .swiper-slide-active{opacity:1;}
+.swiper-certification .certification-item{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;flex:1;height:192px;background:#EAEAEA;border-radius:30px;pointer-events:none;}
+.swiper-certification .swiper-slide-active .certification-item{border:2px solid var(--col-primary);background:var(--col-white);box-shadow: 2px 3px 10px #11111133;pointer-events:initial;}
+.swiper-certification .certification-item::before{content:'';position:absolute;top:13px;right:13px;width:28px;height:28px;background-color:#bbb;
+    mask: url('../img/ic_check2.svg') center no-repeat;
+	-webkit-mask: url('../img/ic_check2.svg') center no-repeat;
+	mask-size:100%;
+	-webkit-mask-size:100%;
+}
+.swiper-certification .certification-item.selected::before{background-color:var(--col-primary);}
+.swiper-certification .certification-item img{margin-bottom:10px;width:73px;}
+.swiper-certification .certification-item span{font-weight:500;font-size:2rem;color:var(--fc-01);}
+
+.swiper-certification .popup-toast{position:absolute;bottom:0;left:50%;z-index:100;width:100%;transform:translateX(-50%);}
+.swiper-certification .popup-toast .toast-msg{bottom:-50%;}
+
+.box-certification{position:relative;padding:27px 25px;background:#f9f9f9;border-radius:20px;}
+.box-certification::after{content:'';position:absolute;right:14px;bottom:15px;width:80px;height:80px;background-image:url('../img/cont/bg_certification.png');}
+.box-certification .tit{font-weight:500;font-size:1.8rem;color:var(--fc-01);}
+.box-certification .desc{margin-top:13px;color:var(--fc-04);line-height:1.6;}
+
+/* 인증서 관리 */
+.top-notice{margin-top:-15px;font-size:1.3rem;color:var(--fc-03);}
+.top-notice p::before{content:'';display:inline-block;width:10px;height:12px;background-image:url('../img/ic_notice.svg');vertical-align:middle;}
+.top-notice a{overflow:hidden;display:inline-block;margin:0 5px;white-space:nowrap;width:50%;height:19px;text-overflow:ellipsis;vertical-align:middle;}
+.banner-area{position:relative;margin-top:25px;padding-top:10px;height:115px;}
+.banner-area .tit{font-weight:700;font-size:2.2rem;line-height:1.36;}
+.banner-area::after{content:'';position:absolute;bottom:0;right:0;width:115px;height:115px;background-image:url('../img/cont/banner_img01.png');}
+
+.box-issued{position:relative;padding:30px 0 30px 36px;height:180px;border-radius:20px;
+	background:url('../img/cont/bg_trust_e_sign.png') no-repeat right 25px bottom 20px / 44px,
+	linear-gradient(124deg, #00BAC0 -30%, #00B75B 200%);
+	font-size:1.2rem;color:var(--col-white);}
+.box-issued .name{margin-bottom:30px;}
+.box-issued .name span{display:block;font-size:2.2rem;}
+.box-issued:not(.not) .desc{margin-top:6px;font-size:1rem;letter-spacing:0;color:var(--col-white);opacity:.7;}
+.box-issued .btn-wrap{position:absolute;bottom:0;right:0;transform:translateY(calc(100% + 10px));}
+.box-issued .btn-setting{position:absolute;top:10px;right:10px;width:30px;height:30px;background:url('../img/ic_dot_setting.svg') no-repeat center / 100%;}
+
+.box-issued.not{padding:30px 0 22px;background:#F7F7F7;text-align:center;}
+.box-issued.not .tit{font-weight:500;font-size:1.5rem;color:var(--fc-01);}
+.box-issued.not .desc{margin-top:10px;}
+.box-issued.not a.btn{margin:0 auto;width:222px;height:40px;border-radius:999px;box-shadow: 3px 3px 5px #d9d9d9;background:var(--col-white);font-weight:700;font-size:1.5rem;color:var(--fc-02);}
+
+.service-info{margin-top:58px;padding-bottom:45px;}
+.service-info h2{margin-bottom:5px;font-size:1.8rem;}
+.service-info h2 ~ h2{margin-top:35px;}
+.service-info .tit-sub{margin-bottom:25px;font-size:1.2rem;color:var(--fc-04);}
+.service-info .img-area{margin:0 -24px;}
+.service-info .img-area img{max-width:360px;width:100%;}
+
+.bottom-link-area{margin:30px 0 40px;text-align:center;}
+.bottom-link-area > span{position:relative;display:inline-block;line-height:1;}
+.bottom-link-area > span ~ span{margin-left:5px;}
+.bottom-link-area > span:not(:first-child){padding-left:9px;}
+.bottom-link-area > span:not(:first-child)::before{content:'';position:absolute;top:5px;left:0;width:1px;height:10px;background:#ddd;}

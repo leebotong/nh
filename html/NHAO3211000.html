@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../css/cont.css">
+	<link rel="stylesheet" href="../css/form.css">
+	<link rel="stylesheet" href="../css/comp.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <header>
+                <div id="header">
+                    <div class="header-left">
+                        <a href="#" class="btn-header-back" aria-label="이전화면으로 가기"></a>
+                    </div>
+                    <h1>인증서 관리</h1>
+                    <div class="header-right">
+                        <a href="#" class="btn-header-home" aria-label="메인으로 가기"></a>
+                        <button type="button" class="btn-header-menu" aria-label="전체메뉴" aria-haspopup="menu"></button>
+                    </div>
+                </div>
+            </header>
+            <!-- S : contents-->
+            <div id="contents">
+                <div class="tab">
+                    <div class="tab-nav" role="tablist">
+                        <button class="tab-btn" role="tab" aria-selected="true"><span>사용이력</span></button>
+                        <button class="tab-btn" role="tab" aria-selected="false"><span>발급ㆍ폐지</span></button>
+                    </div>
+                    <div class="tab-container">
+                        <label class="blind" for="frmPeriod">기간선택</label>
+                        <div class="custom-select small">
+                            <a href="#" class="selector" role="button" id="frmPeriod" aria-haspopup="listbox">
+                                <div class="select-item">
+                                    <span>최근 30일</span>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- S : tab 1 -->
+                        <div class="tab-panel" role="tabpanel">
+                            <ul class="list-type-card history">
+                                <li>
+                                    <div class="inner">
+                                        <div>
+                                            <span class="tit">경찰교통민원24</span>
+                                            <span class="date">2023.06.19 14:50:35</span>
+                                        </div>
+                                        <span class="tag">간편인증</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <div>
+                                            <span class="tit">경찰교통민원24</span>
+                                            <span class="date">2023.06.19 14:50:35</span>
+                                        </div>
+                                        <span class="tag">전자서명</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <div>
+                                            <span class="tit">경찰교통민원24</span>
+                                            <span class="date">2023.06.19 14:50:35</span>
+                                        </div>
+                                        <span class="tag">본인확인</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // E : tab 1 -->
+
+                        <!-- S : tab 2 -->
+                        <div class="tab-panel" role="tabpanel">
+                            <ul class="list-type-card history">
+                                <li>
+                                    <div class="inner">
+                                        <div class="ic-issuance">
+                                            <span class="tit">인증서 발급</span>
+                                            <span class="date">2023.06.19 14:50:35</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <div class="ic-discard">
+                                            <span class="tit">인증서 폐지</span>
+                                            <span class="date">2023.06.19 14:50:35</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <div class="ic-issuance">
+                                            <span class="tit">인증서 발급</span>
+                                            <span class="date">2023.06.19 14:50:35</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <div class="ic-discard">
+                                            <span class="tit">인증서 폐지</span>
+                                            <span class="date">2023.06.19 14:50:35</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // E : tab 2 -->
+                    </div>
+                </div>
+            </div>
+            <!-- // E : contents-->
+        </div>
+    </div>
+    
+</body>
+</html>

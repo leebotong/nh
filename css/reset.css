@@ -1,55 +1,132 @@
 @charset 'UTF-8';
 
-*,*::before,*::after{box-sizing:border-box;}
+*{margin:0;padding:0;font:inherit;color:inherit;}
+*, ::after, ::before{box-sizing:border-box;flex-shrink:0;}
+::after, ::before{background-repeat:no-repeat;background-position:center;background-size:100%;}
 
-html{-webkit-tap-highlight-color:rgba(0,0,0,0);}
-html,body{width:100%;min-height:100vh;margin:0;line-height:1;-webkit-text-size-adjust:none;text-size-adjust:none;}
+@font-face{
+	font-family:'NotoSansKR';
+    font-weight:400;
+    font-display:swap;
+	src:url('../font/NotoSansKR/NotoSansKR-Regular.woff') format('woff'), 
+        url('../font/NotoSansKR/NotoSansKR-Regular.woff2') format('woff2');
+}
+@font-face{
+	font-family:'NotoSansKR';
+    font-weight:500;
+    font-display:swap;
+	src:url('../font/NotoSansKR/NotoSansKR-Medium.woff') format('woff'),
+        url('../font/NotoSansKR/NotoSansKR-Medium.woff2') format('woff2');
+}
+@font-face{
+	font-family:'NotoSansKR';
+    font-weight:700;
+    font-display:swap;
+	src:url('../font/NotoSansKR/NotoSansKR-Bold.woff') format('woff'),
+        url('../font/NotoSansKR/NotoSansKR-Bold.woff2') format('woff2');
+}
+@font-face{
+    font-family:'NotoSansKR'; 
+	font-weight:400;
+	font-display:swap;
+    src:url('../font/Roboto/Roboto-Regular.woff') format('woff'), 
+		url('../font/Roboto/Roboto-Regular.woff2') format('woff2');
+    unicode-range:U+0030-0039;
+}
+@font-face{
+    font-family:'NotoSansKR';
+	font-weight:500;
+	font-display:swap;
+    src:url('../font/Roboto/Roboto-Medium.woff') format('woff'), 
+		url('../font/Roboto/Roboto-Medium.woff2') format('woff2');
+    unicode-range:U+0030-0039;
+}
+@font-face{
+    font-family:'NotoSansKR';
+	font-weight:700;
+	font-display:swap;
+    src:url('../font/Roboto/Roboto-Bold.woff') format('woff'), 
+		url('../font/Roboto/Roboto-Bold.woff2') format('woff2');
+    unicode-range:U+0030-0039;
+}
+
+html,body{width:100%;height:100%;font-size:10px;letter-spacing:-.025em;}
 body{user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;}
-body,div,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,span,select,table,td,textarea,th,ul,em,:before,:after,a,label{margin:0;padding:0;}
-body,button,input,select,table,textarea{font-family:var(--ff-noto);font-size:16px;color:var(--fc-default);}
+body,div,h1,h2,h3,h4,h5,h6,ol,ul,li,dl,dd,dt,p,span,em,table,th,td,fieldset,form,legend,label,input,select,textarea,button,:before,:after,a{font:inherit;}
+body,button,input,select,table,textarea{font-family:var(--ff-noto);font-size:1.6rem;color:var(--fc-default);}
+h1,h2,h3,h4,h5,h6{font-weight:700;}
 
-table{border-collapse:collapse;}
+ol,ul{list-style:none;}
+table{border-collapse:collapse;border-spacing:0;}
 caption{overflow:hidden;width:1px;height:1px;margin:-1px 0 0 0;color:transparent;}
+button{border:0;background:transparent;line-height:1;cursor:pointer;}
+select,input{border:none;appearance:none;-webkit-appearance:none;outline:0;}
+address,em,i{font-style:normal;}
 img,fieldset,iframe{border:0;}
 img{max-width:100%;height:auto;}
-ol,ul{list-style:none;}
-address,em{font-style:normal;}
-button,input,textarea{border-radius:0;}
-button{border:0;background:transparent;color:inherit;line-height:1;cursor:pointer;}
-select{border-radius:0;appearance:none;-webkit-appearance:none;}
-input{border:0;outline:0;appearance:none;-webkit-appearance:none;}
 iframe{overflow:hidden;margin:0;padding:0;border:0;vertical-align:top;}
 mark{background-color:transparent;}
-i{font-style:normal;}
-a{position:relative;color:inherit;text-decoration:none;}
-a,button{-webkit-tap-highlight-color:rgba(0,0,0,0);}
-:focus{-webkit-tap-highlight-color:rgba(0,0,0,0) !important;-webkit-focus-ring-color:transparent !important;/*outline:none*/}
-.blind{overflow:hidden;clip:rect(0 0 0 0);position:absolute !important;width:1px;height:1px;margin:-1px;color:transparent;}
+a{text-decoration:none;}
+b{font-weight:500;}
+[hidden]{display:none;}
+/* :focus{-webkit-tap-highlight-color:rgba(0,0,0,0) !important;-webkit-focus-ring-color:transparent !important;outline:none} */
 
-@font-face{
-    font-family:'Roboto'; font-weight:400; font-style:normal; font-display:swap; /*  */
-    src:url('../font/Roboto/Roboto-Regular.woff') format('woff'), url('../font/Roboto/Roboto-Regular.woff2') format('woff2');
-    unicode-range:U+0020-003F;
-}
-@font-face{
-    font-family:'Roboto'; font-weight:500; font-style:normal; font-display:swap; /*  */
-    src:url('../font/Roboto/Roboto-Medium.woff') format('woff'), url('../font/Roboto/Roboto-Regular.woff2') format('woff2');
-    unicode-range:U+0020-003F;
-}
-@font-face{
-    font-family:'Roboto'; font-weight:700; font-style:normal; font-display:swap;
-    src:url('../font/Roboto/Roboto-Bold.woff') format('woff'), url('../font/Roboto/Roboto-Bold.woff2') format('woff2');
-    unicode-range:U+0020-003F;
-}
-@font-face{
-	font-family:'Noto Sans KR'; font-weight:400; font-style:normal; font-display:swap;
-	src:url('../font/Noto_Sans_KR/NotoSans-Regular.woff') format('woff'), url('../font/Noto_Sans_KR/NotoSans-Regular.woff2') format('woff2');
-}
-@font-face{
-	font-family:'Noto Sans KR'; font-weight:500; font-style:normal; font-display:swap;
-	src:url('../font/Noto_Sans_KR/NotoSans-Medium.woff') format('woff'), url('../font/Noto_Sans_KR/NotoSans-Medium.woff2') format('woff2');
-}
-@font-face{
-	font-family:'Noto Sans KR'; font-weight:700; font-style:normal; font-display:swap;
-	src:url('../font/Noto_Sans_KR/NotoSans-Bold.woff') format('woff'), url('./Noto_Sans_KR/NotoSans-Bold.woff2') format('woff2');
+/***** 공통속성 *****/
+legend, .blind{overflow:hidden;position:absolute;width:1px;height:1px;margin:-1px;clip:rect(0 0 0 0);}
+
+/***** variable *****/
+:root{
+	-webkit-tap-highlight-color:transparent;
+	-webkit-text-size-adjust:100%;
+	text-size-adjust:100%;
+	cursor:default;
+	line-height:1.45;
+	overflow-wrap:keep-all;
+	word-break:keep-all;
+	/* tab-size:4; */
+
+	/* color */
+	--col-white:#fff;
+	--col-black:#000;
+	--col-warning:#ec0c0c;
+	--col-primary:#19a647;
+	--col-secondary:#19babf;
+	--col-disabled:#f1f1f1;
+
+	/* font color */
+	--ff-noto:'NotoSansKR', stem-ui, -apple-system, sans-serif;
+
+	--fc-default:var(--fc-02);
+	--fc-01:#111;
+	--fc-02:#333;
+	--fc-03:#666;
+	--fc-04:#888;
+	--fc-05:#999;
+	--fc-06:#bbb;
+	--fc-primary:var(--col-primary);
+	--fc-secondary:var(--col-secondary);
+	--fc-warning:var(--col-warning);
+
+	/* bg color */
+	--bg-c01:var(--col-disabled);
+	--bg-c02:#f9f9f9;
+	--bg-c03:#ebf9f0;
+	--bg-c04:#7e858e;
+
+	/* line color */
+	--line-c01:#ccc;
+	--line-c02:#ddd;
+	--line-c03:#e1e1e1;
+	--line-c04:#ebebeb;
+	--line-c05:#eee;
+	--line-c06:var(--col-disabled);
+
+	/* border */
+	--bdr-radius:10px;
+	--btn-radius:8px;
+	--box-radius:8px;
+
+	/* icon */
+	--icon-w:24px;
+	--icon-h:24px;
 }

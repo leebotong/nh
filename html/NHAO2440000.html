@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../css/cont.css">
+	<link rel="stylesheet" href="../css/form.css">
+	<link rel="stylesheet" href="../css/comp.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <!-- S : contents-->
+            <div id="contents">
+                <p><button type="button" aria-haspopup="dialog" onclick="popOpen(popupFull)" class="btn btn-medium btn-primary">권유직원조회</button></p>
+            </div>
+            <!-- // E : contents-->
+            <div id="bottom">
+                <div class="btn-wrap">
+                    <button type="button" class="btn btn-large btn-primary">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- full popup -->
+    <section id="popupFull" class="popup-area popup-full" aria-hidden="false" style="display:block;">
+        <div class="popup-wrap" role="dialog">
+            <div class="popup-container">
+                <div class="popup-header">
+                    <h2>권유직원 조회</h2>
+                </div>
+                <div class="popup-body">
+                    <div class="tab">
+                        <div class="tab-nav" role="tablist">
+                            <button class="tab-btn" role="tab" aria-selected="true"><span>권유직원</span></button>
+                            <button class="tab-btn" role="tab" aria-selected="false"><span>영업점</span></button>
+                        </div>
+                        <div class="tab-container">
+                            <!-- S : tab 1 -->
+                            <div class="tab-panel" role="tabpanel">
+                                <fieldset class="search-wrap">
+                                    <legend>직원명 검색</legend>
+                                    <div class="inp-affix-wrap">
+                                        <label class="blind" for="frmPerson">직원명</label>
+                                        <input type="text" id="frmPerson" placeholder="직원명 입력">
+                                        <button role="button" class="btn icon-only ic-input-delete">입력어삭제</button>
+                                        <button class="btn icon-only ic-search">검색</button>
+                                    </div>
+                                </fieldset>
+                                <!-- S : 검색결과 없는 경우 노출 -->
+                                <div class="no-result">
+                                    <p>조회 결과가 없습니다.</p>
+                                </div>
+                                <!-- // E: 검색결과 없는 경우 노출 -->
+
+                                <!-- S : 검색결과 리스트 -->
+                                <p class="list-total">총<span class="point-txt">22</span>건</p>
+                                <ul class="list-type-line">
+                                    <li>
+                                        <div class="inner">
+                                            <span class="person"><b>홍*동</b> 1722****</span>
+                                            <span>디지털여신센터</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inner">
+                                            <span class="person"><b>홍*동</b> 1722****</span>
+                                            <span>대전스마트시티지점</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inner">
+                                            <span class="person"><b>홍*동</b> 1722****</span>
+                                            <span>서교동지점</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inner">
+                                            <span class="person"><b>홍*동</b> 1722****</span>
+                                            <span>칠성동지점</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inner">
+                                            <span class="person"><b>홍*동</b> 1722****</span>
+                                            <span>전남도교육청&lt;출&gt;</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inner">
+                                            <span class="person"><b>홍*동</b> 1722****</span>
+                                            <span>경기본부</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- // E : 검색결과 리스트 -->
+                            </div>
+                            <!-- // E : tab 1 -->
+
+                            <!-- S : tab 2 -->
+                            <div class="tab-panel" role="tabpanel">
+                                <fieldset class="search-wrap">
+                                    <legend>영업점 검색</legend>
+                                    <div class="inp-affix-wrap">
+                                        <label class="blind" for="frmBranch">영업점명</label>
+                                        <input type="text" id="frmBranch" placeholder="영업점명 입력">
+                                        <button role="button" class="btn icon-only ic-input-delete">입력어삭제</button>
+                                        <button class="btn icon-only ic-search">검색</button>
+                                    </div>
+                                </fieldset>
+                                <!-- S : 검색결과 없는 경우 노출 -->
+                                <div class="no-result">
+                                    <p>조회 결과가 없습니다.</p>
+                                </div>
+                                <!-- // E: 검색결과 없는 경우 노출 -->
+
+                                <!-- S : 검색결과 리스트 -->
+                                <p class="list-total">총<span class="point-txt">22</span>건</p>
+                                <ul class="list-type-line">
+                                    <li>
+                                        <div class="inner">
+                                            <span class="person"><b>홍*동</b> 1722****</span>
+                                            <span>서울여신관리단</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inner">
+                                            <span class="person"><b>홍*동</b> 1722****</span>
+                                            <span>서울여신관리단</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inner">
+                                            <span class="person"><b>홍*동</b> 1722****</span>
+                                            <span>서울여신관리단</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inner">
+                                            <span class="person"><b>홍*동</b> 1722****</span>
+                                            <span>서울여신관리단</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inner">
+                                            <span class="person"><b>홍*동</b> 1722****</span>
+                                            <span>서울여신관리단</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inner">
+                                            <span class="person"><b>홍*동</b> 1722****</span>
+                                            <span>서울여신관리단</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- // E : 검색결과 리스트 -->
+                            </div>
+                            <!-- // E : tab 2 -->
+                        </div>
+                    </div>
+                </div>
+                <button type="button" onclick="popClose(this)" class="popup-close">팝업닫기</button>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

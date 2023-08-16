@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <g id="ico" transform="translate(0 -0.001)">
+    <path id="area" d="M0,0H60V60H0Z" transform="translate(0 0.001)" fill="rgba(255,0,0,0)" opacity="0"/>
+    <g id="Group_24520" data-name="Group 24520">
+      <path id="Path_12945" data-name="Path 12945" d="M26.082,30.825A12.573,12.573,0,0,1,22.329,43.47" transform="translate(0.209 -2.812)" fill="none" stroke="#333" stroke-linecap="round" stroke-width="3"/>
+      <path id="Path_12946" data-name="Path 12946" d="M2.42,17.811A12.7,12.7,0,0,1,14.714,2C20.7,2,25.837,5.7,27.426,13.326" transform="translate(11.576 13.363)" fill="none" stroke="#333" stroke-linecap="round" stroke-width="3"/>
+      <path id="Path_12947" data-name="Path 12947" d="M10.1,31.514c4.661-2.619,2.791-7.5,2.791-8.782a6.349,6.349,0,0,1,6.355-6.317c7.327,0,7.034,9.548,6.536,12.651a18.681,18.681,0,0,1-2.238,6.318" transform="translate(7.049 5.274)" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="모양_915" data-name="모양 915" d="M2235.994,4383.365a25.987,25.987,0,0,1-5.069-2.923,2.516,2.516,0,0,0-1.227-.446,2.631,2.631,0,0,0-1.234.446,26.208,26.208,0,0,1-5.076,2.923c-1.54.68-1.443,1.742-1.33,2.8l.665,6.208a4.418,4.418,0,0,0,2.014,2.949l3.563,1.819a2.524,2.524,0,0,0,2.791,0l3.559-1.819a4.414,4.414,0,0,0,2.012-2.949l.664-6.208C2237.438,4385.107,2237.534,4384.045,2235.994,4383.365Z" transform="translate(-2185.952 -4351.984)" fill="#48c771"/>
+      <path id="모양_826" data-name="모양 826" d="M2233,4395.844l2.715,3.152,3.236-4.92" transform="translate(-2191.975 -4359.723)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

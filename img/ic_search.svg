@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" viewBox="0 0 84 84">
+  <g id="ico_input_delete" transform="translate(-1213 -1001)">
+    <rect id="area_touch" width="84" height="84" transform="translate(1213 1001)" fill="red" opacity="0"/>
+    <g id="Icon_48_ic_search" data-name="Icon / 48 / ic_search" transform="translate(803 376)">
+      <g id="area" transform="translate(200 -1414)">
+        <rect id="area_48" width="48" height="48" transform="translate(228 2057)" fill="red" opacity="0"/>
+      </g>
+      <g id="Ellipse_203" data-name="Ellipse 203" transform="translate(436.21 650.789)" fill="none" stroke="#888" stroke-width="3">
+        <ellipse cx="12.433" cy="12.433" rx="12.433" ry="12.433" stroke="none"/>
+        <ellipse cx="12.433" cy="12.433" rx="10.933" ry="10.933" fill="none"/>
+      </g>
+      <line id="Line_39" data-name="Line 39" x2="10.076" y2="9.549" transform="translate(456.5 671.5)" fill="none" stroke="#888" stroke-linecap="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

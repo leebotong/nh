@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../css/cont.css">
+	<link rel="stylesheet" href="../css/form.css">
+	<link rel="stylesheet" href="../css/comp.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <!-- S : contents-->
+            <div id="contents">
+                <div class="result-wrap">
+                    <p class="big-title">NH모바일인증서가 <span class="point-txt">채널명</span>에서 <br>발급 되었습니다</p>
+                    <p class="desc"><span class="point-txt">인증서 유효기간은 3년</span>이며, 아래 버튼으로 <br>생체 또는 패턴을 등록하실 수 있습니다.</p>
+                </div>
+                <ul class="list-type-card js_selected">
+                    <li>
+                        <div class="inner">
+                            <b class="ic-finger-print">지문(Face ID)</b>
+                            <button type="button" class="btn btn-small-rnd btn-line-primary">등록하기</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <b class="ic-pattern">패턴</b>
+                            <button type="button" class="btn btn-small-rnd btn-line">변경하기</button>
+                        </div>
+                    </li>
+                </ul>
+                
+            </div>
+            <!-- // E : contents-->
+            <div id="bottom">
+                <div class="btn-wrap">
+                    <button type="button" class="btn btn-large btn-primary">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- full popup -->
+    <section id="popupFull" class="popup-area popup-full" aria-hidden="false" style="display:block;">
+        <div class="popup-wrap" role="dialog">
+            <div class="popup-container">
+                <div class="popup-body">
+                    <div class="result-wrap result-certify">
+                        <p class="big-title">지문 또는 Face ID를 <br>인식해주세요</p>
+                        <button type="button" class="btn btn-medium btn-line-primary">재시도</button>
+                    </div>
+                </div>
+                <button type="button" onclick="popClose(this)" class="popup-close">팝업닫기</button>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

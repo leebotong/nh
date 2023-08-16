@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/var.css">
+	<link rel="stylesheet" href="../../css/comm.css">
+	<link rel="stylesheet" href="../../css/form.css">
+	<link rel="stylesheet" href="../../css/comp.css">
+	<link rel="stylesheet" href="../../css/layout.css">
+    <script src="../../js/jquery-3.6.4.min.js"></script>
+    <script src="../../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div id="header">
+                <div class="header-left">
+                    <a href="#" class="btn icon-only ic-back" aria-label="이전화면으로 가기"></a>
+                </div>
+                <h1>NH모바일인증서발급</h1>
+                <div class="header-right">
+                    <a href="#" class="btn icon-only ic-home" aria-label="메인으로 가기"></a>
+                    <button type="button" aria-haspopup="menu" class="btn icon-only ic-menu" aria-label="전체메뉴"></button>
+                </div>
+            </div>
+        </header>
+        <div id="container">
+            <div id="contents">
+                <h2>#reverse list</h2>
+                <ul class="list-reverse">
+                    <li class="list-item">가나다라 <button>[클릭해봐]</button></li>
+                    <li class="list-item">마바사아 <button>[클릭해봐]</button></li>
+                    <li class="list-item">자차카타 <button>[클릭해봐]</button></li>
+                    <li class="list-item">파하하하 <button>[클릭해봐]</button></li>
+                    <li class="list-item">재미있는 한글놀이 같이 해보자~~</li>
+                </ul>
+
+                <h2 style="margin-top:20px;margin-bottom:10px;">#card type list 기본형</h2>
+                <ul class="list-type-card">
+                    <li>
+                        <div class="inner">
+                            <div>카드타입리스트 기본형 1</div>
+                            <button>[상세보기]</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <div>카드타입리스트 기본형 2</div>
+                            <button>[상세보기]</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <div>카드타입리스트 기본형 3</div>
+                            <button>[상세보기]</button>
+                        </div>
+                    </li>
+                </ul>
+
+                <h2 style="margin-top:20px;margin-bottom:10px;">#card type list 선택형</h2>
+                <h3>case1. Radiobutton</h3>
+                <ul class="list-type-card js_selected">
+                    <li>
+                        <div class="inner">
+                            <span class="form-check">
+                                <input type="radio" name="rdo02" id="rdo0201" checked>
+                                <label for="rdo0201">카드타입리스트 1</label>
+                            </span>
+                            <button>[상세보기]</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="form-check">
+                                <input type="radio" name="rdo02" id="rdo0202" disabled>
+                                <label for="rdo0202">카드타입리스트 2</label>
+                            </span>
+                            <button>[상세보기]</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="form-check">
+                                <input type="radio" name="rdo02" id="rdo0203">
+                                <label for="rdo0203">카드타입리스트 3</label>
+                            </span>
+                            <button>[상세보기]</button>
+                        </div>
+                    </li>
+                </ul>
+                <h3 style="margin-top:20px">case2. Checkbox</h3>
+                <ul class="list-type-card js_selected">
+                    <li>
+                        <div class="inner">
+                            <span class="form-check">
+                                <input type="checkbox" id="chk0201" checked>
+                                <label for="chk0201">카드타입리스트 1</label>
+                            </span>
+                            <button>[상세보기]</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="form-check">
+                                <input type="checkbox" id="chk0202" disabled>
+                                <label for="chk0202">카드타입리스트 2</label>
+                            </span>
+                            <button>[상세보기]</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <span class="form-check">
+                                <input type="checkbox" id="chk0203">
+                                <label for="chk0203">카드타입리스트 3</label>
+                            </span>
+                            <button>[상세보기]</button>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="scroll-ani">
+                    <div><p class="scr-ani">1111</p></div>
+                    <div><p>2222</p></div>
+                    <div><p class="scr-ani">3333</p></div>
+                    <div><p class="scr-ani">4444</p></div>
+                    <div><p>5555</p></div>
+                </div>
+            </div>
+            <div id="bottom">
+                <div class="btn-wrap">
+                    <button type="button" class="btn btn-large btn-primary">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // scrollAni();
+        document.getElementById('contents').addEventListener("scroll", scrollAni);
+    </script>
+</body>
+</html>

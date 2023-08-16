@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/var.css">
+	<link rel="stylesheet" href="../../css/comm.css">
+	<link rel="stylesheet" href="../../css/form.css">
+	<link rel="stylesheet" href="../../css/comp.css">
+	<link rel="stylesheet" href="../../css/popup.css">
+	<link rel="stylesheet" href="../../css/layout.css">
+    <script src="../../js/jquery-3.6.4.min.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+    <script src="../../js/common.js"></script>
+</head>
+<body>
+    <section id="wrapper">
+        <header>
+            <div id="header">
+                <div class="header-left">
+                    <a href="#" class="btn icon-only ic-back" aria-label="이전화면으로 가기"></a>
+                </div>
+                <h1>NH모바일인증서발급</h1>
+                <div class="header-right">
+                    <a href="#" class="btn icon-only ic-home" aria-label="메인으로 가기"></a>
+                    <button type="button" aria-haspopup="menu" class="btn icon-only ic-menu" aria-label="전체메뉴"></button>
+                </div>
+            </div>
+        </header>
+        <div id="container">
+            <!-- S:contents -->
+            <div class="contents">
+                <!-- swiper -->
+                <div class="swiper st_card">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slideBox">
+                                    swiper slide 01
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slideBox">
+                                    swiper slide 02
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slideBox">
+                                    swiper slide 03
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slideBox">
+                                    swiper slide 04
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slideBox">
+                                    swiper slide 05
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiperNavigation">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- //swiper -->
+
+                <script>
+                    $(document).ready(function(){
+                        function introSwiper() {
+                            $(".swiper").each(function (idx) {
+                                var $this = $(this);
+                                $this.addClass("type" + idx);
+
+                                //슬라이드 초기화
+                                if (introSwiper != undefined) {
+                                    introSwiper.destroy();
+                                    introSwiper = undefined;
+                                }
+
+                                var introSwiper = new Swiper(".type" + idx + " .swiper-container", {
+                                    centeredSlides: true,
+                                    observer: true,
+                                    observeParents: true,
+                                    //observeSlideChildren: true,
+                                    pagination: {
+                                        el: $(".type" + idx).find(".swiper-pagination"),
+                                        clickable: true,
+                                        bulletElement: "a",
+                                    },
+                                    autoplay: false,
+                                    loop: true,
+                                    navigation: {
+                                        nextEl: $(".type" + idx).find(".swiper-button-next"),
+                                        prevEl: $(".type" + idx).find(".swiper-button-prev"),
+                                    },
+                                    on: {
+                                        init: function () {
+                                            $(".type" + idx + " .swiper-container").find(".swiper-slide").attr("aria-hidden", true).removeAttr("tabindex");
+                                            $(".type" + idx + " .swiper-container").find(".swiper-slide.swiper-slide-active").attr("aria-hidden", false).attr("tabindex", 0);
+                                        },
+                                        slideChangeTransitionEnd: function () {
+                                            $(".type" + idx + " .swiper-container").find(".swiper-slide").attr("aria-hidden", true).removeAttr("tabindex");
+                                            $(".type" + idx + " .swiper-container").find(".swiper-slide.swiper-slide-active").attr("aria-hidden", false).attr("tabindex", 0);
+                                            $(".type" + idx + " .swiper-pagination").find("a").attr("title", "");
+                                            $(".type" + idx + " .swiper-pagination").find("a").eq(this.activeIndex).attr("title", "선택됨");
+                                        },
+                                    },
+                                });
+
+                                // autoplay control 옵션
+                                // $(".swiper-pagination").append('<a href="javascript:;" class="swiperAuto stop" role="button" aria-label="일시정지">■</a>');
+                                // $(".swiperAuto").on("click", function () {
+                                // 	if ($(this).hasClass("stop")) {
+                                // 		$(this).addClass("start").removeClass("stop").text("▶").attr("aria-label", "재생");
+                                // 		introSwiper.autoplay.stop();
+                                // 	} else {
+                                // 		$(this).addClass("stop").removeClass("start").text("■").attr("aria-label", "일시정지");
+                                // 		introSwiper.autoplay.start();
+                                // 	}
+                                // });
+                            });
+                        }
+
+                        introSwiper();
+                    })
+                </script>
+            </div>
+            <!-- // E:contents -->
+            <div class="fixed-bottom">fixed bottom</div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../css/cont.css">
+	<link rel="stylesheet" href="../css/form.css">
+	<link rel="stylesheet" href="../css/comp.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <!-- S : contents-->
+            <div id="contents">
+                <div class="custom-select">
+                    <a href="#" class="selector" role="button" id="frmBank" aria-haspopup="listbox" onclick="popOpen(popupBottom)">
+                        <div class="select-item">
+                            <span>SKT</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- // E : contents-->
+        </div>
+    </div>
+
+    <!-- bottom popup -->
+    <section id="popupBottom" class="popup-area popup-bottom" aria-hidden="true">
+        <div class="mask"></div>
+        <div class="popup-wrap" role="dialog" aria-modal="true">
+            <div class="popup-container">
+                <div class="popup-header">
+                    <h2>통신사</h2>
+                </div>
+                <div class="popup-body">
+                    <ul class="list-select-option">
+                        <li><button type="button" class="option-item">SKT</button></li>
+                        <li><button type="button" class="option-item">KT</button></li>
+                        <li><button type="button" class="option-item">LG U+</button></li>
+                        <li><button type="button" class="option-item">SKT 알뜰폰</button></li>
+                        <li><button type="button" class="option-item">KT 알뜰폰</button></li>
+                        <li><button type="button" class="option-item">LG U+ 알뜰폰</button></li>
+                    </ul>
+                </div>
+                <button type="button" onclick="popClose(this)" class="popup-close">팝업닫기</button>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

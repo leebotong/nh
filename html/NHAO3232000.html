@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../css/cont.css">
+	<link rel="stylesheet" href="../css/form.css">
+	<link rel="stylesheet" href="../css/comp.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+	<script src="../js/swiper.min.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <header>
+                <div id="header">
+                    <div class="header-left">
+                        <a href="#" class="btn-header-back" aria-label="이전화면으로 가기"></a>
+                    </div>
+                    <h1>주 인증서 설정</h1>
+                    <div class="header-right">
+                        <a href="#" class="btn-header-home" aria-label="메인으로 가기"></a>
+                        <button type="button" class="btn-header-menu" aria-label="전체메뉴" aria-haspopup="menu"></button>
+                    </div>
+                </div>
+            </header>
+            <!-- S : contents-->
+            <div id="contents">
+                <p class="big-title">주 인증서를 선택해 주세요</p>
+                <!-- swiper -->
+                <div class="swiper swiper-certification">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="certification-item">
+                                    <img src="../img/cont/img_certification01.png" alt="NH올원뱅크 이미지">
+                                    <span>NH올원뱅크</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="certification-item">
+                                    <img src="../img/cont/img_certification01.png" alt="NH스마트뱅킹 이미지">
+                                    <span>NH스마트뱅킹</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="certification-item">
+                                    <img src="../img/cont/img_certification01.png" alt="NH콕뱅크 이미지">
+                                    <span>NH콕뱅크</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- toast popup -->
+                    <section id="popupToast" class="popup-toast" aria-hidden="true">
+                        <div aria-live="polite" class="toast-msg">주 인증서 설정이 완료되었습니다.</div>
+                    </section>
+                </div>
+                <!-- //swiper -->
+
+                <div class="box-certification">
+                    <p class="tit">NH농협에서 <span class="point-txt">올인원</span>으로!</p>
+                    <p class="desc">
+                        NH모바일인증서 하나로 <br>
+                        NH뱅킹 앱 어디서든 주 인증서 <br>
+                        설정으로 간편하게 이용해 보세요.
+                    </p>
+                </div>
+
+                <script>
+                    $(".swiper").each(function (idx) {
+                        var $this = $(this);
+                        $this.addClass("type" + idx);
+                        
+                        var swiper = new Swiper(".swiper-container", {
+                            slidesPerView: 'auto',
+                            spaceBetween: 20,
+                            loop: true,
+                            centeredSlides: true,
+                            observer: true,
+                            observeParents: true,
+                            on: {
+                                init: function () {
+                                    $this.find(".swiper-slide").attr("aria-hidden", true).removeAttr("tabindex");
+                                    $this.find(".swiper-slide.swiper-slide-active")
+                                    .attr({
+                                        "aria-hidden":false,
+                                        "tabindex":0
+                                    })
+                                },
+                                slideChangeTransitionEnd: function () {
+                                    $this.find(".swiper-slide").attr("aria-hidden", true).removeAttr("tabindex");
+                                    $this.find(".swiper-slide.swiper-slide-active")
+                                    .attr({
+                                        "aria-hidden":false,
+                                        "tabindex":0
+                                    })
+                                },
+                            },
+                            // 웹접근성
+                            a11y: {
+                                enabled: true,
+                                slideLabelMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
+                            },
+                        });
+                    
+                        var $item = $(".certification-item");
+                        $item.on('click', function(){
+                            $(this).each(function(){
+                                if($(this).hasClass("selected")){
+                                    $(this).removeClass("selected")
+                                } else {
+                                    $item.removeClass("selected")
+                                    $(this).addClass("selected")
+                                    toastOpen(popupToast)
+                                }
+                            })
+                        })
+                    });
+                </script>
+            </div>
+            <!-- // E : contents-->
+        </div>
+    </div>
+    
+</body>
+</html>
