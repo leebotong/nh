@@ -33,7 +33,7 @@ input::placeholder{color:var(--fc-06);}
 -------------------------- */
 /* 공통 */
 .form-check{position:relative;display:inline-flex;}
-input:where([type=checkbox], [type=radio]){width:0;height:0;}
+input:where([type=checkbox], [type=radio]){background:red;}
 input:where([type=checkbox], [type=radio]) + label{position:relative;display:inline-flex;align-items:center;font-size:1.6rem;}
 input:where([type=checkbox], [type=radio]):disabled + label{color:var(--fc-05);}
 input[type=checkbox] + label::before, input[type=checkbox] + label::after{content:'';width:28px;height:28px;}
