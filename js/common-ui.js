@@ -253,7 +253,10 @@ $(function () {
 				.slideDown(200, function(){
 					var inpTxt = $(this).find('input[type=text]')
 					if(inpTxt.length != 0){
-						inpTxt.focus();
+						setTimeout(function () {
+							inpTxt.focus()
+						}, 1);
+						
 					}
 				})
 			} else {
