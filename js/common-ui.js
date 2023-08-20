@@ -253,11 +253,15 @@ $(function () {
 				.slideDown(200, function () {
                     var $inputText = $(this).find('input[type=text]');
                     if ($inputText.length > 0) {
-                        $inputText.focus(); // 포커스를 input 요소로 이동
-						$('#contents').scrollTop(0, $inputText.offset().top - 50); 
+                        $inputText.focus();
                         if (/Mobi|Android/i.test(navigator.userAgent)) {
-                            // 모바일 장치의 경우, 스크롤을 위해 뷰포트를 조정합니다.
-                            $('#contents').scrollTop(0, $inputText.offset().top - 50); // 필요한 만큼 조절 가능
+                            // 모바일 장치의 경우, 포커스 후 키패드가 자동으로 올라오도록 합니다.
+                            setTimeout(function () {
+                                $inputText.get(0).scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'center',
+                                });
+                            }, 300); // 300ms 딜레이 후 실행 (시간을 조절 가능)
                         }
                     }
 				})
