@@ -254,6 +254,7 @@ $(function () {
                     var $inputText = $(this).find('input[type=text]');
                     if ($inputText.length > 0) {
                         $inputText.focus(); // 포커스를 input 요소로 이동
+						$('#contents').scrollTo(0, $inputText.offset().top - 50); 
                         if (/Mobi|Android/i.test(navigator.userAgent)) {
                             // 모바일 장치의 경우, 스크롤을 위해 뷰포트를 조정합니다.
                             $('#contents').scrollTo(0, $inputText.offset().top - 50); // 필요한 만큼 조절 가능
