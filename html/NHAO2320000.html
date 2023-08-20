@@ -12,36 +12,44 @@
 	<link rel="stylesheet" href="../css/comp.css">
     <script src="../js/jquery-3.6.4.min.js"></script>
 	<script src="../js/swiper.min.js"></script>
-    <script src="../js/common.js"></script>
+    <script src="../js/common-ui.js"></script>
 </head>
 <body>
     <div id="wrap">
         <div id="container">
             <!-- S : contents-->
             <div id="contents">
-                <p><button type="button" aria-haspopup="dialog" onclick="popOpen(popupFull)" class="btn btn-medium btn-primary">전체약관동의 팝업 열기</button></p>
+                <p><button type="button" aria-haspopup="dialog" onclick="popOpen(popupFull)" class="btn btn-medium btn-primary">전체약관동의 팝업 호출</button></p>
             </div>
             <!-- // E : contents-->
         </div>
     </div>
 
     <!-- full popup -->
-    <section id="popupFull" class="popup-area popup-full" aria-hidden="true">
+    <!-- <section id="popupFull" class="popup-area popup-full" aria-hidden="true"> -->
+    <section id="popupFull" class="popup-area popup-full" aria-hidden="false" style="display:block;">
         <div class="popup-wrap" role="dialog">
             <div class="popup-container">
                 <div class="popup-header">
                     <h2>전체약관동의</h2>
                 </div>
                 <div class="popup-body">
-                    <div class="swiper" style="height:100%;border:1px solid red;">
-                        <div class="swiper-container" style="height:100%;">
-                            <div class="swiper-wrapper" style="height:100%;">
-                                <div class="swiper-slide" style="height:100%;border:1px solid blue">
-                                    <div style="overflow:auto;width:100%;max-height:100%;border:1px solid orange;"><p style="height:2000px;background:tomato;">약관 1</p></div>
+                    <div class="swiper swiper-terms">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="terms-cont">약관 1의 내용을 넣어주세요</div>
                                 </div>
-                                <div class="swiper-slide">약관 2</div>
-                                <div class="swiper-slide">약관 3</div>
+                                <div class="swiper-slide">
+                                    <div class="terms-cont">약관 2의 내용을 넣어주세요</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="terms-cont">약관 3의 내용을 넣어주세요</div>
+                                </div>
                             </div>
+
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
                     </div>
                 </div>
@@ -67,6 +75,10 @@
                 centeredSlides: true,
                 observer: true,
                 observeParents: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
                 on: {
                     init: function () {
                         $this.find(".swiper-slide").attr("aria-hidden", true).removeAttr("tabindex");

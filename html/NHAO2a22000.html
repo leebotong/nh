@@ -20,7 +20,7 @@
                 <div class="custom-select">
                     <a href="#" class="selector" role="button" id="frmBank" aria-haspopup="listbox" onclick="popOpen(popupBottom)">
                         <div class="select-item">
-                            <span>SKT</span>
+                            <span>010-1234-5678</span>
                         </div>
                     </a>
                 </div>
@@ -30,21 +30,18 @@
     </div>
 
     <!-- bottom popup -->
-    <section id="popupBottom" class="popup-area popup-bottom" aria-hidden="true">
+    <!-- <section id="popupBottom" class="popup-area popup-bottom" aria-hidden="true"> -->
+    <section id="popupBottom" class="popup-area popup-bottom" aria-hidden="false" style="display:block;">
         <div class="mask"></div>
         <div class="popup-wrap" role="dialog" aria-modal="true">
             <div class="popup-container">
                 <div class="popup-header">
-                    <h2>통신사</h2>
+                    <h2>휴대전화번호</h2>
                 </div>
                 <div class="popup-body">
                     <ul class="list-select-option">
-                        <li><button type="button" class="option-item">SKT</button></li>
-                        <li><button type="button" class="option-item">KT</button></li>
-                        <li><button type="button" class="option-item">LG U+</button></li>
-                        <li><button type="button" class="option-item">SKT 알뜰폰</button></li>
-                        <li><button type="button" class="option-item">KT 알뜰폰</button></li>
-                        <li><button type="button" class="option-item">LG U+ 알뜰폰</button></li>
+                        <li><button type="button" class="option-item">010-1234-5678(전화ARS 인증)</button></li>
+                        <li><button type="button" class="option-item">010-1234-5678(스마트폰 지정)</button></li>
                     </ul>
                 </div>
                 <button type="button" onclick="popClose(this)" class="popup-close">팝업닫기</button>

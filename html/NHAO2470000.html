@@ -62,22 +62,25 @@
                         <div class="input-text-wrap">
                             <input type="text" id="frmAccount" placeholder="계좌번호 입력">
                         </div>
-                    </div>
-                    <div class="form-item">
-                        <label for="frmPw">계좌 비밀번호</label>
-                        <div class="input-text-wrap">
-                            <input type="password" id="frmPw" maxlength="4" placeholder="숫자 4자리 입력">
+                        <div class="btn-wrap">
+                            <button class="btn btn-medium btn-line">계좌 검증</button>
                         </div>
                     </div>
                     <div class="form-item">
-                        <label for="frmWorker">권유직원<span class="option">(선택사항)</span></label>
+                        <div class="gray-box exam-img">
+                            <figure><img src="../img/cont/img_account_verify.png" alt="계좌입금화면 예시 이미지"></figure>
+                            <p class="desc" role="alert">인증하신 타행계좌로 1원을 보내드렸습니다.<br>입금자로 표시된 <span class="point-txt">숫자6자리</span>를 입력해 주세요.</p>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label for="frmCertify">인증번호</label>
                         <div class="input-text-wrap">
-                            <input type="text" id="frmWorker" value="" readonly>
-                            <button type="button" class="btn btn-small btn-line" aria-haspopup="dialog">조회</button>
+                            <input type="text" id="frmCertify" value="" placeholder="숫자 6자리 입력">
                         </div>
                     </div>
                 </div>
                 <!-- // E : form -->
+                
             </div>
             <!-- // E : contents-->
             <div id="bottom">

@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../css/swiper.min.css">
 	<link rel="stylesheet" href="../../css/reset.css">
-	<link rel="stylesheet" href="../../css/var.css">
-	<link rel="stylesheet" href="../../css/comm.css">
+	<link rel="stylesheet" href="../../css/layout.css">
+	<link rel="stylesheet" href="../../css/cont.css">
 	<link rel="stylesheet" href="../../css/form.css">
 	<link rel="stylesheet" href="../../css/comp.css">
-	<link rel="stylesheet" href="../../css/layout.css">
     <script src="../../js/jquery-3.6.4.min.js"></script>
-    <script src="../../js/common.js"></script>
+    <script src="../../js/common-ui.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -39,19 +37,26 @@
                 <!-- S:input -->
                 <div class="input-text-wrap">
                     <input type="text" value="" title="이름입력" placeholder="이름을 입력하세요">
-                    <button role="button" aria-label="입력어 삭제" class="btn-input-clear"></button>
+                    <button type="button" aria-label="입력어 삭제" class="btn-input-clear"></button>
                 </div>
 
                 <div class="input-text-wrap">
                     <input type="text" value="" title="검색어입력" placeholder="검색어를 입력하세요">
-                    <button role="button" aria-label="입력어 삭제" class="btn-input-clear"></button>
+                    <button type="button" aria-label="입력어 삭제" class="btn-input-clear"></button>
                     <button role="button" aria-label="검색" class="btn-search"></button>
                 </div>
 
                 <!-- S:select box -->
                 <div class="custom-select">
-                    <button type="button" aria-haspopup="dialog">셀렉트박스</button>
+                    <a href="#" class="selector" role="button" id="frmItem" aria-haspopup="listbox" onclick="popOpen(popupBottom)">
+                        <div class="select-item">
+                            <span>SKT</span>
+                        </div>
+                    </a>
                 </div>
+                <!-- <div class="custom-select">
+                    <button type="button" aria-haspopup="dialog">셀렉트박스</button>
+                </div> -->
                 
                 <!-- S:check default -->
                 <div class="form-group" style="margin-top:20px;">
@@ -123,12 +128,12 @@
                         <label for="frmName">이름</label>
                         <div class="input-text-wrap">
                             <input type="text" id="frmName" placeholder="이름 입력">
-                            <button role="button" aria-label="입력어 삭제" class="btn-input-clear"></button>
+                            <button type="button" aria-label="입력어 삭제" class="btn-input-clear"></button>
                         </div>
                     </div>
                     <div class="form-item">
                         <label>주민등록번호(앞 7자리)</label>
-                        <div class="form-item-group inp-jumin">
+                        <div class="form-item-group input-jumin">
                             <label class="blind" for="frmBirth">생년월일</label>
                             <div class="input-text-wrap">
                                 <input type="tel" id="frmBirth" placeholder="생년월일">
@@ -150,7 +155,7 @@
                     <div class="form-item">
                         <label>휴대전화번호</label>
                         <div class="form-item-row">
-                            <div class="form-item-group inp-mobile">
+                            <div class="form-item-group input-mobile">
                                 <label class="blind" for="frmMo1">휴대폰번호 앞3자리 선택</label>
                                 <div class="custom-select">
                                     <button type="button" id="frmMo1">010</button>
@@ -175,11 +180,11 @@
                 </div>
                 <!-- // E : form -->
             </div>
-            <div id="bottom">
+            <!-- <div id="bottom">
                 <div class="btn-wrap">
                     <button type="button" class="btn btn-large btn-primary">확인</button>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </body>

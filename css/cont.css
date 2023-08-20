@@ -1,8 +1,8 @@
 @charset 'UTF-8';
 
-.gray-box{border-radius:var(--box-radius);background:var(--bg-c02);}
+.gray-box{border-radius:var(--box-radius);background:var(--bg-c02);text-align:center;}
 
-.exam-img{padding:13px 0;text-align:center;}
+.exam-img{padding:13px 0;}
 .exam-img img{max-width:312px;width:100%;}
 .exam-img .desc{margin-top:10px;color:var(--fc-04);}
 
@@ -18,6 +18,9 @@
 .device-regist .img-wrap img{max-width:312px;width:100%;}
 .device-regist .img-wrap .desc{margin-top:-10px;}
 
+.popup-cert-info{text-align:center;}
+.popup-cert-info::before{content:'';display:block;margin:0 auto 20px;width:80px;height:80px;background:linen;}
+
 /* 전체약관동의 */
 .big-title + .terms-wrap{margin-top:24px;}
 .terms-wrap{overflow:hidden;border:1px solid #ebebeb;border-radius:4px;}
@@ -29,6 +32,11 @@
 .terms-list input[type=checkbox] + label::after{background:#bbb;}
 .terms-list input[type=checkbox]:checked + label::before{background:none;}
 .terms-list input[type=checkbox]:checked + label::after{background-color:var(--col-primary);}
+
+.swiper-terms,
+.swiper-terms :where(.swiper-container, .swiper-wrapper, .swiper-slide){height:100%;}
+.swiper-terms .swiper-slide{display:block;text-align:left;}
+.swiper-terms .terms-cont{overflow:auto;width:100%;max-height:100%;}
 
 /* 주 인증서 설정 */
 .swiper-certification{margin:40px -24px 0;}
@@ -82,7 +90,7 @@
 .service-info h2{margin-bottom:5px;font-size:1.8rem;}
 .service-info h2 ~ h2{margin-top:35px;}
 .service-info .tit-sub{margin-bottom:25px;font-size:1.2rem;color:var(--fc-04);}
-.service-info .img-area{margin:0 -24px;}
+.service-info .img-area{margin:0 -24px;text-align:center;}
 .service-info .img-area img{max-width:360px;width:100%;}
 
 .bottom-link-area{margin:30px 0 40px;text-align:center;}
@@ -90,3 +98,8 @@
 .bottom-link-area > span ~ span{margin-left:5px;}
 .bottom-link-area > span:not(:first-child){padding-left:9px;}
 .bottom-link-area > span:not(:first-child)::before{content:'';position:absolute;top:5px;left:0;width:1px;height:10px;background:#ddd;}
+
+/* ARS인증 */
+.ars-cert{padding:28px 0;}
+.ars-cert .ars-num{margin:0 auto 20px;width:70px;height:70px;border-radius:20px;background:var(--col-white);}
+.ars-cert .ars-num span{display:flex;justify-content:center;align-items:center;height:100%;font-weight:700;font-size:3.5rem;color:#2c6dd4;}

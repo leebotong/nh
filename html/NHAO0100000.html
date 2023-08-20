@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../css/cont.css">
+	<link rel="stylesheet" href="../css/form.css">
+	<link rel="stylesheet" href="../css/comp.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/common-ui.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <!-- S : contents-->
+            <div id="contents">
+                <p style="margin-top:10px;"><button type="button" aria-haspopup="dialog" onclick="popOpen(popupAlert)" class="btn btn-medium btn-primary">Alert형 팝업 호출</button></p>
+            </div>
+            <!-- // E : contents-->
+        </div>
+    </div>
+
+    <!-- center alert popup -->
+    <!-- <section id="popupAlert" class="popup-area popup-center" aria-hidden="true"> -->
+    <section id="popupAlert" class="popup-area popup-center" aria-hidden="false" style="display:block;">
+        <div class="mask"></div>
+        <div class="popup-wrap" role="alertdialog" aria-modal="true">
+            <div class="popup-container popup-alert">
+                <div class="popup-header">
+                    <h2>안내</h2>
+                </div>
+                <div class="popup-body">
+                    <p>내용을 넣어주세요 내용을 넣어주세요</p>
+                </div>
+                <div class="popup-footer">
+                    <div class="btn-wrap">
+                        <button type="button" class="btn btn-large btn-line-primary" onclick="popClose(this)">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

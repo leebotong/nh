@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/swiper.min.css">
 	<link rel="stylesheet" href="../css/reset.css">
 	<link rel="stylesheet" href="../css/layout.css">
 	<link rel="stylesheet" href="../css/cont.css">
 	<link rel="stylesheet" href="../css/form.css">
 	<link rel="stylesheet" href="../css/comp.css">
     <script src="../js/jquery-3.6.4.min.js"></script>
-    <script src="../js/common.js"></script>
+    <script src="../js/common-ui.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -28,61 +27,14 @@
         <div id="container">
             <!-- S : contents-->
             <div id="contents">
-                <!-- S : step -->
-                <div class="step">
-                    <div class="step-bar" data-total="4" data-step="2">
-                        <span class="step-status"></span>
-                    </div>
-                    <div class="step-num">
-                        <span class="total"></span>
-                        <span class="now"></span>
-                    </div>
-                </div>
-                <!-- // E : step -->
-
-                <p class="big-title">
-                    NH모바일인증서 <br>이용약관을 확인해 주세요
-                    <button type="button" class="btn-icon btn-help" aria-label="도움말" aria-haspopup="dialog"></button>
-                </p>
-                <div class="terms-wrap">
-                    <div class="terms-header">
-                        <span class="form-check">
-                            <input type="checkbox" id="chk0100">
-                            <label for="chk0100">전체동의</label>
-                        </span>
-                    </div>
-                    <ul class="terms-list">
-                        <li>
-                            <span class="form-check">
-                                <input type="checkbox" id="chk0101">
-                                <label for="chk0101">[필수] 개인정보 수집·이용 동의</label>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="form-check">
-                                <input type="checkbox" id="chk0102">
-                                <label for="chk0102">[필수] 개인정보 수집 및 이용 동의서</label>
-                            </span>
-                        </li>
-                        <li>
-                            <span class="form-check">
-                                <input type="checkbox" id="chk0103">
-                                <label for="chk0103">[필수] 연계정보 수집 및 이용 동의서</label>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
+                <p><button type="button" aria-haspopup="dialog" onclick="popOpen(popupFull)" class="btn btn-medium btn-primary">개별약관동의 팝업 호출</button></p>
             </div>
             <!-- // E : contents-->
-            <div id="bottom">
-                <div class="btn-wrap">
-                    <button type="button" class="btn btn-large btn-primary" disabled>다음</button>
-                </div>
-            </div>
         </div>
     </div>
 
     <!-- full popup -->
+    <!-- <section id="popupFull" class="popup-area popup-full" aria-hidden="true"> -->
     <section id="popupFull" class="popup-area popup-full" aria-hidden="false" style="display:block;">
         <div class="popup-wrap" role="dialog">
             <div class="popup-container">

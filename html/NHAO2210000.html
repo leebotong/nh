@@ -17,13 +17,7 @@
         <div id="container">
             <!-- S : contents-->
             <div id="contents">
-                <div class="custom-select">
-                    <a href="#" class="selector" role="button" id="frmBank" aria-haspopup="listbox" onclick="popOpen(popupBottom)">
-                        <div class="select-item">
-                            <span>SKT</span>
-                        </div>
-                    </a>
-                </div>
+                <p><button type="button" aria-haspopup="dialog" onclick="popOpen(popupBottom)" class="btn btn-medium btn-primary">휴대 전화 본인인증 안내 팝업 열기</button></p>
             </div>
             <!-- // E : contents-->
         </div>
@@ -35,19 +29,18 @@
         <div class="popup-wrap" role="dialog" aria-modal="true">
             <div class="popup-container">
                 <div class="popup-header">
-                    <h2>통신사</h2>
+                    <h2>휴대 전화 본인인증 안내</h2>
                 </div>
                 <div class="popup-body">
-                    <ul class="list-select-option">
-                        <li><button type="button" class="option-item">SKT</button></li>
-                        <li><button type="button" class="option-item">KT</button></li>
-                        <li><button type="button" class="option-item">LG U+</button></li>
-                        <li><button type="button" class="option-item">SKT 알뜰폰</button></li>
-                        <li><button type="button" class="option-item">KT 알뜰폰</button></li>
-                        <li><button type="button" class="option-item">LG U+ 알뜰폰</button></li>
-                    </ul>
+                    <div class="popup-cert-info mobile">
+                        <p>본인 이름으로 개통된 <br>휴대전화로 인증해 주세요.</p>
+                    </div>
                 </div>
-                <button type="button" onclick="popClose(this)" class="popup-close">팝업닫기</button>
+                <div class="popup-footer">
+                    <div class="btn-wrap">
+                        <button type="button" class="btn btn-large btn-primary" onclick="popClose(this)">확인</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

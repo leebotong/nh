@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../css/swiper.min.css">
-	<link rel="stylesheet" href="../../css/reset.css">
-	<link rel="stylesheet" href="../../css/var.css">
-	<link rel="stylesheet" href="../../css/comm.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/layout.css">
+	<link rel="stylesheet" href="../../css/cont.css">
 	<link rel="stylesheet" href="../../css/form.css">
 	<link rel="stylesheet" href="../../css/comp.css">
-	<link rel="stylesheet" href="../../css/layout.css">
     <script src="../../js/jquery-3.6.4.min.js"></script>
-    <script src="../../js/common.js"></script>
+    <script src="../../js/common-ui.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -30,82 +28,80 @@
         </header>
         <div id="container">
             <div id="contents">
-                <div class="collapse st_button">
+                <!-- <div class="collapse st_button">
                     <div class="collapse-item">
                         <button type="button" class="collapse-title js_trigger">토글버튼</button>
                         <div class="collapse-cont">
                             <div class="inner">어쩌구 저쩌구 어쩔시구 저쩔시구</div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
-                <ul class="collapse">
-                    <li class="collapse-item">
+                <ul class="collapse js_toggle">
+                    <li class="collapse-item js_toggle_item">
                         <button type="button" class="collapse-title js_trigger">collapse title 1</button>
-                        <div class="collapse-cont">
-                            <div class="inner">collapse content 11</div>
+                        <div class="collapse-cont js_toggle_cont" hidden>
+                            <div class="inner">collapse content 1</div>
                         </div>
                     </li>
-                    <li class="collapse-item">
+                    <li class="collapse-item js_toggle_item">
                         <button type="button" class="collapse-title js_trigger">collapse title 2</button>
-                        <div class="collapse-cont">
-                            <div class="inner">collapse content 12</div>
+                        <div class="collapse-cont js_toggle_cont" hidden>
+                            <div class="inner">collapse content 2</div>
                         </div>
                     </li>
                 </ul>
 
-                <ul class="collapse">
-                    <li class="collapse-item">
+                <ul class="collapse js_toggle">
+                    <li class="collapse-item js_toggle_item">
                         <button type="button" class="collapse-title js_trigger">collapse title 21</button>
-                        <div class="collapse-cont">
+                        <div class="collapse-cont js_toggle_cont" hidden>
                             <div class="inner">collapse content 21</div>
                         </div>
                     </li>
-                    <li class="collapse-item">
+                    <li class="collapse-item js_toggle_item">
                         <button type="button" class="collapse-title js_trigger">collapse title 22</button>
-                        <div class="collapse-cont">
+                        <div class="collapse-cont js_toggle_cont" hidden>
                             <div class="inner">collapse content 22</div>
                         </div>
                     </li>
                 </ul>
                 <br>
 
-                <div class="terms-wrap">
-                    <div class="collapse">
-                        <div class="collapse-item">
-                            <div class="form-check">
-                                <input type="checkbox" id="chk0101">
-                                <label for="chk0101" class="js_trigger active">체크박스 all</label>
-                            </div>
-                            <ul class="collapse-cont">
-                                <li>
-                                    <span class="form-check">
-                                        <input type="checkbox" id="chk0102">
-                                        <label for="chk0102">체크박스 1</label>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="form-check">
-                                        <input type="checkbox" id="chk0103">
-                                        <label for="chk0103">체크박스 2</label>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="form-check">
-                                        <input type="checkbox" id="chk0104">
-                                        <label for="chk0104">체크박스 3</label>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="terms-wrap js_toggle">
+                    <div class="terms-header">
+                        <span class="form-check">
+                            <input type="checkbox" id="chk0100">
+                            <label for="chk0100">전체동의</label>
+                        </span>
                     </div>
+                    <ul class="terms-list">
+                        <li>
+                            <span class="form-check">
+                                <input type="checkbox" id="chk0101">
+                                <label for="chk0101">[필수] NH모바일인증서 서비스 이용약관</label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="form-check">
+                                <input type="checkbox" id="chk0102">
+                                <label for="chk0102">[필수] 개인정보 수집 및 이용 동의서</label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="form-check">
+                                <input type="checkbox" id="chk0103">
+                                <label for="chk0103">[필수] 연계정보 수집 및 이용 동의서</label>
+                            </span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div id="bottom">
+            <!-- <div id="bottom">
                 <div class="btn-wrap">
                     <button type="button" class="btn btn-large btn-primary">확인</button>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </body>

@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/swiper.min.css">
 	<link rel="stylesheet" href="../css/reset.css">
 	<link rel="stylesheet" href="../css/layout.css">
 	<link rel="stylesheet" href="../css/cont.css">
 	<link rel="stylesheet" href="../css/form.css">
 	<link rel="stylesheet" href="../css/comp.css">
     <script src="../js/jquery-3.6.4.min.js"></script>
-    <script src="../js/common.js"></script>
+    <script src="../js/common-ui.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -61,13 +60,19 @@
                         <li>
                             <span class="form-check">
                                 <input type="checkbox" id="chk0102">
-                                <label for="chk0102">[필수] 개인정보 수집 및 이용 동의서</label>
+                                <label for="chk0102">[필수] 개인정보 제 3자 제공 동의</label>
                             </span>
                         </li>
                         <li>
                             <span class="form-check">
                                 <input type="checkbox" id="chk0103">
-                                <label for="chk0103">[필수] 연계정보 수집 및 이용 동의서</label>
+                                <label for="chk0103">[필수] 서비스 이용약관 동의</label>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="form-check">
+                                <input type="checkbox" id="chk0104">
+                                <label for="chk0104">[필수] 통신사 이용약관 동의</label>
                             </span>
                         </li>
                     </ul>
@@ -79,15 +84,15 @@
                         <label for="frmName">이름</label>
                         <div class="input-text-wrap">
                             <input type="text" id="frmName" placeholder="이름 입력">
-                            <button role="button" aria-label="입력어 삭제" class="btn-input-clear"></button>
+                            <button type="button" aria-label="입력어 삭제" class="btn-input-clear"></button>
                         </div>
                     </div>
                     <div class="form-item">
                         <label>주민등록번호(앞 7자리)</label>
-                        <div class="form-item-group inp-jumin">
+                        <div class="form-item-group input-jumin">
                             <label class="blind" for="frmBirth">생년월일</label>
                             <div class="input-text-wrap">
-                                <input type="tel" id="frmBirth" placeholder="생년월일">
+                                <input type="tel" id="frmBirth" maxlength="6" placeholder="생년월일">
                             </div>
                             <span class="inp-txt"></span>
                             <div class="form-item-group">
@@ -106,7 +111,7 @@
                     <div class="form-item">
                         <label>휴대전화번호</label>
                         <div class="form-item-row">
-                            <div class="form-item-group inp-mobile">
+                            <div class="form-item-group input-mobile">
                                 <label class="blind" for="frmMo1">휴대폰번호 앞3자리 선택</label>
                                 <div class="custom-select">
                                     <button type="button" id="frmMo1">010</button>
