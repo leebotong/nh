@@ -250,7 +250,12 @@ $(function () {
 				$this.addClass('active')
 				.attr('aria-expanded', true)
 				.closest('.js_toggle_item').find('.js_toggle_cont')
-				.slideDown(200)
+				.slideDown(200, function(){
+					var inpTxt = $(this).find('input[type=text]')
+					if(inpTxt.length != 0){
+						inpTxt.focus();
+					}
+				})
 			} else {
 				$this.removeClass('active')
 				.attr('aria-expanded', false)

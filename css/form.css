@@ -9,10 +9,11 @@ input[type=password]{letter-spacing:5px;}
 input[type=password]::placeholder{letter-spacing:0;}
 input::placeholder{color:var(--fc-06);}
 
-.input-text-wrap{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ddd;}
+.input-text-wrap{position:relative;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ddd;}
 .input-text-wrap.focus{border-color:var(--col-primary);}
 .input-text-wrap.error{border-color:var(--fc-warning);}
 .input-text-wrap > input{border:none;}
+.input-text-wrap .btn-security{position:absolute;top:0;left:0;z-index:10;width:100%;height:100%;background:transparent;}
 
 .custom-select{display:inline-flex;width:100%;height:42px;}
 .custom-select button,
