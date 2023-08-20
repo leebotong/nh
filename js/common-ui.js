@@ -252,11 +252,8 @@ $(function () {
 				.closest('.js_toggle_item').find('.js_toggle_cont')
 				.slideDown(200, function(){
 					var inpTxt = $(this).find('input[type=text]')
-					if(inpTxt.length != 0){
-						setTimeout(function () {
-							inpTxt.focus()
-						}, 1);
-						
+					if(inpTxt.length > 0){
+						inpTxt.focus()
 					}
 				})
 			} else {
