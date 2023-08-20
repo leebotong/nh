@@ -253,7 +253,7 @@ $(function () {
 				.slideDown(200, function () {
                     var $inputText = $(this).find('input[type=text]');
                     if ($inputText.length > 0) {
-                        $inputText.focus();
+                        $inputText.focusin();
                         if (/Mobi|Android/i.test(navigator.userAgent)) {
                             // 모바일 장치의 경우, 포커스 후 키패드가 자동으로 올라오도록 합니다.
                             setTimeout(function () {
@@ -261,7 +261,7 @@ $(function () {
                                     behavior: 'smooth',
                                     block: 'center',
                                 });
-                            }, 300); // 300ms 딜레이 후 실행 (시간을 조절 가능)
+                            }, 100); // 300ms 딜레이 후 실행 (시간을 조절 가능)
                         }
                     }
 				})
