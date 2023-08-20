@@ -250,20 +250,7 @@ $(function () {
 				$this.addClass('active')
 				.attr('aria-expanded', true)
 				.closest('.js_toggle_item').find('.js_toggle_cont')
-				.slideDown(200, function () {
-                    var $inputText = $(this).find('input[type=text]');
-                    if ($inputText.length > 0) {
-                        $inputText.focus();
-                        if (/Mobi|Android/i.test(navigator.userAgent)) {
-                            // 모바일 장치의 경우, 키패드가 올라오도록 강제로 가상의 이벤트를 발생시킵니다.
-                            var event = new Event('input', {
-                                bubbles: true,
-                                cancelable: false,
-                            });
-                            $inputText.get(0).dispatchEvent(event);
-                        }
-                    }
-				})
+				.slideDown(200)
 			} else {
 				$this.removeClass('active')
 				.attr('aria-expanded', false)
