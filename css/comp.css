@@ -205,6 +205,7 @@ h2{margin-bottom:12px;font-weight:500;font-size:1.9rem;color:var(--fc-01);}
 .swiper-button-contr .swiper-button-next,
 .swiper-button-contr .swiper-button-prev{color:var(--black-07);}
 .swiper-button-next:after, .swiper-button-prev:after{font-size:3.5rem;}
+.swiper-button-next, .swiper-button-prev{z-index:20;}
 
 /* --------------------------
 		scroll animation

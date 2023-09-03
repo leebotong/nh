@@ -53,11 +53,7 @@
                         $this.addClass("type" + idx);
                         
                         var swiper = new Swiper(".swiper", {
-                            loop:true,
-                            centeredSlides: true,
-                            observer: true,
-                            observeParents: true,
-                            
+                            loop: true,
                             navigation: {
                                 nextEl: ".swiper-button-next",
                                 prevEl: ".swiper-button-prev",
@@ -84,6 +80,37 @@
                                     })
                                 },
                             },
+                            // loop:true,
+                            // centeredSlides: true,
+                            // observer: true,
+                            // observeParents: true,
+                            
+                            // navigation: {
+                            //     nextEl: ".swiper-button-next",
+                            //     prevEl: ".swiper-button-prev",
+                            // },
+                            // pagination: {
+                            //     el: ".swiper-pagination",
+                            //     clickable: true,
+                            // },
+                            // on: {
+                            //     init: function () {
+                            //         $this.find(".swiper-slide").attr("aria-hidden", true).removeAttr("tabindex");
+                            //         $this.find(".swiper-slide.swiper-slide-active")
+                            //         .attr({
+                            //             "aria-hidden":false,
+                            //             "tabindex":0
+                            //         })
+                            //     },
+                            //     slideChangeTransitionEnd: function () {
+                            //         $this.find(".swiper-slide").attr("aria-hidden", true).removeAttr("tabindex");
+                            //         $this.find(".swiper-slide.swiper-slide-active")
+                            //         .attr({
+                            //             "aria-hidden":false,
+                            //             "tabindex":0
+                            //         })
+                            //     },
+                            // },
                             // 웹접근성
                             a11y: {
                                 enabled: true,
