@@ -196,7 +196,7 @@ h2{margin-bottom:12px;font-weight:500;font-size:1.9rem;color:var(--fc-01);}
 -------------------------- */
 /* swiper */
 /* 기본값이 수정 된 스타일 */
-.swiper{position:relative;height:350px;}
+.swiper{position:relative;height:350px;border:1px solid blue;}
 .swiper-wrapper{height:100%;}
 .swiper-slide{display:flex;background:linen;height:100%;}
 .scroll-container{overflow:auto;width:100%;border:1px solid red}
