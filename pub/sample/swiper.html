@@ -24,7 +24,7 @@
                 <h1>NH모바일인증서발급</h1>
                 <div class="header-right">
                     <a href="#" class="btn icon-only ic-home" aria-label="메인으로 가기"></a>
-                    <button type="button" aria-haspopup="menu" class="btn icon-only ic-menu" aria-label="전체메뉴"></button>
+                    <button type="button" -haspopup="menu" class="btn icon-only ic-menu" aria-label="전체메뉴"></button>
                 </div>
             </div>
         </header>
@@ -33,16 +33,21 @@
                 <!-- swiper -->
                 <div class="swiper">
                     <div class="swiper-wrapper">
-                      <!-- Slides -->
-                      <div class="swiper-slide">Slide 1 최종</div>
-                      <div class="swiper-slide">Slide 2 최종</div>
-                      <div class="swiper-slide">Slide 3 최종</div>
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="scroll-container">
+                                <p>컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 컨텐츠스크롤 </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">Slide 2 최종</div>
+                        <div class="swiper-slide">Slide 3 최종</div>
                     </div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
-
                     <div class="swiper-pagination"></div>
-                  
+                    
+                    </div>
+                
                     <!-- <div class="swiper-scrollbar"></div> -->
                 </div>
                 <!-- //swiper -->
@@ -54,6 +59,7 @@
                         
                         var swiper = new Swiper(".swiper", {
                             loop: true,
+                            nested:true,
                             navigation: {
                                 nextEl: ".swiper-button-next",
                                 prevEl: ".swiper-button-prev",
