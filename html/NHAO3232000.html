@@ -33,10 +33,20 @@
             <div id="contents">
                 <p class="big-title">주 인증서를 선택해 주세요</p>
                 <!-- swiper -->
-                <div class="swiper swiper-certification">
+                <div class="swiper mySwiper">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
-                            <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+                  
+                <!-- <div class="swiper swiper-certification">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="certification-item">
                                     <img src="../img/cont/img_certification01.png" alt="NH올원뱅크 이미지">
@@ -57,12 +67,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- toast popup -->
-                    <section id="popupToast" class="popup-toast" aria-hidden="true">
-                        <div aria-live="polite" class="toast-msg">주 인증서 설정이 완료되었습니다.</div>
-                    </section>
-                </div>
+                </div> -->
                 <!-- //swiper -->
 
                 <div class="box-certification">
@@ -74,7 +79,7 @@
                     </p>
                 </div>
 
-                <script>
+                <!-- <script>
                     $(".swiper").each(function (idx) {
                         var $this = $(this);
                         $this.addClass("type" + idx);
@@ -124,11 +129,16 @@
                             })
                         })
                     });
-                </script>
+                </script> -->
             </div>
             <!-- // E : contents-->
         </div>
     </div>
+
+    <!-- toast popup -->
+    <section id="popupToast" class="popup-toast" aria-hidden="true">
+        <div aria-live="polite" class="toast-msg">주 인증서 설정이 완료되었습니다.</div>
+    </section>
     
 </body>
 </html>

@@ -3,6 +3,7 @@ $(function () {
 	// 초기값 실행 함수
 	var common_ui = {
 		init: function () {
+			common_ui.jsSwiper();
 			common_ui.jsHeader();
 			common_ui.jsStep();
 			common_ui.jsInp();
@@ -10,6 +11,72 @@ $(function () {
 			common_ui.jsToggle();
 			common_ui.jsToast();
 			common_ui.jsChecked();
+		},
+
+		// swiper
+		jsSwiper: function () {
+			$(".swiper").each(function (idx) {
+				var $this = $(this);
+				$this.addClass("type" + idx);
+
+				var defaultOptions = {
+					observer: true,
+					observeParents: true,
+					navigation: {
+						nextEl: ".swiper-button-next",
+						prevEl: ".swiper-button-prev",
+					},
+					on: {
+						init: function () { swiperA11y() },
+						slideChangeTransitionEnd: function () { swiperA11y() },
+					},
+					// 웹접근성
+					a11y: {
+						enabled: true,
+						slideLabelMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
+					},
+				}
+
+				var swiper1 = new Swiper('.swiper-container', defaultOptions);
+				var swiper2 = new Swiper('.mySwiper .swiper-container', {
+					defaultOptions,
+					centeredSlides: true,
+					lidesPerView: 'auto',
+					spaceBetween: 20,
+					loop: true,
+					loopedSlides: 3,
+				});
+
+				// var swiper2 = new Swiper('.swiper-certification .swiper-container', {
+				// 	defaultOptions,
+				// 	slidesPerView: 'auto',
+				// 	spaceBetween: 20,
+				// 	centeredSlides: true,
+				// 	loop: true,
+				// 	loopedSlides: 3,
+				// });
+				
+				// var swiper = new Swiper(".swiper-container", {
+				// 	// slidesPerView: 'auto',
+				// 	// spaceBetween: 20,
+				// 	// loop: true,
+				// 	// centeredSlides: true,
+					
+				// });
+			
+				// var $item = $(".certification-item");
+				// $item.on('click', function(){
+				// 	$(this).each(function(){
+				// 		if($(this).hasClass("selected")){
+				// 			$(this).removeClass("selected")
+				// 		} else {
+				// 			$item.removeClass("selected")
+				// 			$(this).addClass("selected")
+				// 			toastOpen(popupToast)
+				// 		}
+				// 	})
+				// })
+			});
 		},
 
 		// 헤더
