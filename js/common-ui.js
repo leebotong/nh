@@ -36,7 +36,10 @@ $(function () {
 					// 웹접근성
 					a11y: {
 						enabled: true,
+						prevSlideMessage: '이전 슬라이드',
+						nextSlideMessage: '다음 슬라이드',   
 						slideLabelMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
+						paginationBulletMessage: '{{index}}번 슬라이드'
 					},
 				}
 
@@ -47,6 +50,26 @@ $(function () {
 					spaceBetween: 20,
 					loop: true,
 					centeredSlides: true,
+					effect: 'coverflow',
+					coverflowEffect: {
+						// Coverflow 효과 설정
+						rotate: 0, // 슬라이드 회전 각도
+						stretch: 0, // 슬라이드 간의 간격을 늘리거나 줄임
+						depth: 100, // 슬라이드 겹침 깊이
+						modifier: 1, // 다른 슬라이드 크기에 대한 보정 계수
+						slideShadows: false,
+					  },
+					// effect: "creative",
+					// creativeEffect: {
+					// 	prev: {
+					// 		shadow: true,
+					// 		translate: ["-80%", 0, -300],
+					// 	},
+					// 	next: {
+					// 		shadow: true,
+					// 		translate: ["80%", 0, -300],
+					// 	},
+					// },
 				});
 
 				// var swiper2 = new Swiper('.swiper-certification .swiper-container', {
