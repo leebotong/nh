@@ -43,7 +43,7 @@
 .mySwiper .swiper-slide{width:50% !important;}
 .swiper-certification{margin:40px -24px 0;}
 .swiper-certification .swiper-wrapper{height:auto;}
-.swiper-certification .swiper-slide{width:50%;padding-bottom:50px;opacity:.3;}
+.swiper-certification .swiper-slide{width:50% !important;padding-bottom:50px;opacity:.3;}
 .swiper-certification .swiper-slide-active{opacity:1;}
 .swiper-certification .certification-item{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;flex:1;height:192px;background:#EAEAEA;border-radius:30px;pointer-events:none;}
 .swiper-certification .swiper-slide-active .certification-item{border:2px solid var(--col-primary);background:var(--col-white);box-shadow: 2px 3px 10px #11111133;pointer-events:initial;}

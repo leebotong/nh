@@ -33,20 +33,10 @@
             <div id="contents">
                 <p class="big-title">주 인증서를 선택해 주세요</p>
                 <!-- swiper -->
-                <div class="swiper mySwiper">
+                <div class="swiper swiper-certification">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                  </div>
-                  
-                <!-- <div class="swiper swiper-certification">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
+                            <!-- Slides -->
                             <div class="swiper-slide">
                                 <div class="certification-item">
                                     <img src="../img/cont/img_certification01.png" alt="NH올원뱅크 이미지">
@@ -67,7 +57,12 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+
+                    <!-- toast popup -->
+                    <section id="popupToast" class="popup-toast" aria-hidden="true">
+                        <div aria-live="polite" class="toast-msg">주 인증서 설정이 완료되었습니다.</div>
+                    </section>
+                </div>
                 <!-- //swiper -->
 
                 <div class="box-certification">
@@ -92,22 +87,8 @@
                             observer: true,
                             observeParents: true,
                             on: {
-                                init: function () {
-                                    $this.find(".swiper-slide").attr("aria-hidden", true).removeAttr("tabindex");
-                                    $this.find(".swiper-slide.swiper-slide-active")
-                                    .attr({
-                                        "aria-hidden":false,
-                                        "tabindex":0
-                                    })
-                                },
-                                slideChangeTransitionEnd: function () {
-                                    $this.find(".swiper-slide").attr("aria-hidden", true).removeAttr("tabindex");
-                                    $this.find(".swiper-slide.swiper-slide-active")
-                                    .attr({
-                                        "aria-hidden":false,
-                                        "tabindex":0
-                                    })
-                                },
+                                init: function () { swiperA11y() },
+                                slideChangeTransitionEnd: function () { swiperA11y() },
                             },
                             // 웹접근성
                             a11y: {
@@ -134,11 +115,6 @@
             <!-- // E : contents-->
         </div>
     </div>
-
-    <!-- toast popup -->
-    <section id="popupToast" class="popup-toast" aria-hidden="true">
-        <div aria-live="polite" class="toast-msg">주 인증서 설정이 완료되었습니다.</div>
-    </section>
     
 </body>
 </html>

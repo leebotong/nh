@@ -15,6 +15,9 @@ $(function () {
 
 		// swiper
 		jsSwiper: function () {
+			var swiperWrap = document.querySelectorAll('.swiper');
+			if(!swiperWrap) return;
+			
 			$(".swiper").each(function (idx) {
 				var $this = $(this);
 				$this.addClass("type" + idx);
@@ -37,14 +40,13 @@ $(function () {
 					},
 				}
 
-				var swiper1 = new Swiper('.swiper-container', defaultOptions);
-				var swiper2 = new Swiper('.mySwiper .swiper-container', {
-					defaultOptions,
-					centeredSlides: true,
-					lidesPerView: 'auto',
+				var swiper1 = new Swiper('.swiper-terms .swiper-container', defaultOptions);
+				var swiper2 = new Swiper('.swiper-certification .swiper-container', {
+					...defaultOptions,
+					slidesPerView: 'auto',
 					spaceBetween: 20,
 					loop: true,
-					loopedSlides: 3,
+					centeredSlides: true,
 				});
 
 				// var swiper2 = new Swiper('.swiper-certification .swiper-container', {
