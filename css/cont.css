@@ -66,9 +66,13 @@
 .box-certification .desc{margin-top:13px;color:var(--fc-04);line-height:1.6;}
 
 /* 인증서 관리 */
-.top-notice{margin-top:-15px;font-size:1.3rem;color:var(--fc-03);}
-.top-notice p::before{content:'';display:inline-block;width:10px;height:12px;background-image:url('../img/ic_notice.svg');vertical-align:middle;}
-.top-notice a{overflow:hidden;display:inline-block;margin:0 5px;white-space:nowrap;width:50%;height:19px;text-overflow:ellipsis;vertical-align:middle;}
+.top-notice{display:flex;flex-wrap:nowrap;margin-top:-15px;font-size:1.3rem;color:var(--fc-03);}
+.top-notice .flag{padding:5px;border:1px solid green;}
+.top-notice .subject{overflow:hidden;flex:1;width:100%;border:1px solid red;}
+.top-notice .subject > span{display:flex;border:1px solid violet}
+.top-notice .subject > span > a{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:calc(100% - 30px);border:1px solid orange;}
+/* .top-notice p::before{content:'';display:inline-block;width:10px;height:12px;background-image:url('../img/ic_notice.svg');vertical-align:middle;}
+.top-notice a{overflow:hidden;display:inline-block;margin:0 5px;white-space:nowrap;width:50%;height:19px;text-overflow:ellipsis;vertical-align:middle;} */
 .banner-area{position:relative;margin-top:25px;padding-top:10px;height:115px;}
 .banner-area .tit{font-weight:700;font-size:2.2rem;line-height:1.36;}
 .banner-area::after{content:'';position:absolute;bottom:0;right:0;width:115px;height:115px;background-image:url('../img/cont/banner_img01.png');}
