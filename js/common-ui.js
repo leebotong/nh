@@ -3,6 +3,7 @@ $(function () {
 	// 초기값 실행 함수
 	var common_ui = {
 		init: function () {
+			common_ui.keypadCheck();
 			common_ui.jsSwiper();
 			common_ui.jsHeader();
 			common_ui.jsStep();
@@ -11,17 +12,16 @@ $(function () {
 			common_ui.jsToggle();
 			common_ui.jsToast();
 			common_ui.jsChecked();
-			common_ui.keypadCheck();
 		},
 
 		// keypad check
 		keypadCheck: function(){
 			var winH = $(window).height();
-			var docH = $(document).height();
+			var docH = $('#wrap').height();
 
-			// alert(winH, docH);
+			console.log('windowHeight:' + winH + 'wrapHeight:' + docH);
 
-			if (winH > docH) {
+			if (winH < docH) {
 				$('body').css('background','green')
 			} else {
 				$('body').css('background','red')
