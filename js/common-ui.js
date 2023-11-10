@@ -493,6 +493,8 @@ $(function () {
 		})
 
     common_ui.init();
+
+	$(window).on('resize', keypadCheck);
 });
 
 // 이전에 포커스를 설정한 요소를 기억할 변수
