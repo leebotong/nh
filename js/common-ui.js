@@ -11,6 +11,19 @@ $(function () {
 			common_ui.jsToggle();
 			common_ui.jsToast();
 			common_ui.jsChecked();
+			common_ui.keypadCheck();
+		},
+
+		// keypad check
+		keypadCheck: function(){
+			var winH = $(window).height();
+			var docH = $(document).height();
+
+			if (winH < docH) {
+				$('body').css('background','green')
+			} else {
+				$('body').css('background','red')
+			}
 		},
 
 		// swiper
@@ -71,6 +84,18 @@ $(function () {
 					// 	},
 					// },
 				});
+				var swiper3 = new Swiper('.swiper-rolling .swiper-container', {
+					...defaultOptions,
+					allowTouchMove : false,
+					autoplay: {
+						delay: 0, //add
+						disableOnInteraction: false,
+					},
+					speed: 5000,
+					loop: true,
+					loopAdditionalSlides: 1,
+					slidesPerView: 3,
+				})
 
 				// var swiper2 = new Swiper('.swiper-certification .swiper-container', {
 				// 	defaultOptions,
