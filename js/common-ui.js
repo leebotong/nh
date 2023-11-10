@@ -19,7 +19,7 @@ $(function () {
 			var winH = $(window).height();
 			var docH = $(document).height();
 
-			alert(winH, docH);
+			// alert(winH, docH);
 
 			if (winH < docH) {
 				$('body').css('background','green')
