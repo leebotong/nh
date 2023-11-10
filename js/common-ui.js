@@ -148,7 +148,7 @@ $(function () {
 				// $('#wrap').css('height','80%')
 				setTimeout(function(){
 					keypadCheck();
-				}, 1);
+				}, 100);
 			})
 		},
 
@@ -494,7 +494,7 @@ $(function () {
 // keypad check
 function keypadCheck(){
 	var winH = $('body').height();
-	var docH = $('#wrap').height();
+	var docH = $('#wrap').outerHeight();
 
 	console.log('windowHeight:' + winH + 'wrapHeight:' + docH);
 
