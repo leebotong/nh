@@ -493,7 +493,7 @@ $(function () {
 
 // keypad check
 function keypadCheck(){
-	var winH = window.innerHeight;
+	var winH = $('body').innerHeight;
 	var wrap = $('#wrap');
     wrap.css('height', window.innerHeight + 'px');
 	// var winH = $('body').height();
