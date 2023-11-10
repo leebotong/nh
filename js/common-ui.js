@@ -493,19 +493,18 @@ $(function () {
 
 // keypad check
 function keypadCheck(){
-	var winH = $('body').innerHeight;
-	var wrap = $('#wrap');
-    wrap.css('height', window.innerHeight + 'px');
+	var bodyH = $('body').innerHeight();
+	var wrapH = $('#wrap').outerHeight();
 	// var winH = $('body').height();
 	// var docH = $('#wrap').outerHeight();
 
-	console.log('windowHeight:' + winH + 'wrapHeight:' + wrap.height());
+	console.log('windowHeight:' + bodyH + 'wrapHeight:' + wrapH);
 
-	// if (winH > docH) {
-	// 	$('body').css('background','green')
-	// } else {
-	// 	$('body').css('background','red')
-	// }
+	if (bodyH > wrapH) {
+		$('body').css('background','green')
+	} else {
+		$('body').css('background','red')
+	}
 };
 
 
