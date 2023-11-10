@@ -145,10 +145,12 @@ $(function () {
 			});
 
 			$('input').on('focus', function(){
+				adjustHeight();
+            	adjustScroll();
 				// $('#wrap').css('height','80%')
-				setTimeout(function(){
-					keypadCheck();
-				}, 100);
+				// setTimeout(function(){
+				// 	keypadCheck();
+				// }, 100);
 			})
 		},
 
@@ -485,30 +487,56 @@ $(function () {
 		})
 
     common_ui.init();
-	keypadCheck();
+	// keypadCheck();
 
 	// $(window).on('resize', keypadCheck)
 
 });
 
 // keypad check
-function keypadCheck(){
-	var bodyH = $('body').height();
-	var wrapH = $('#wrap').outerHeight();
-	// var winH = $('body').height();
-	// var docH = $('#wrap').outerHeight();
+function adjustHeight() {
+	var content = $('#wrap');
+	content.css('height', window.innerHeight + 'px');
+}
 
-	console.log('windowHeight:' + bodyH + 'wrapHeight:' + wrapH);
+function adjustScroll() {
+	// Adjust scroll position when the keyboard is displayed
+	var content = $('#wrap');
+	var scrollHeight = content.prop('scrollHeight');
+	var windowHeight = window.innerHeight;
 
-	if (bodyH > wrapH) {
-		$('body').css('background','green')
-	} else {
-		$('body').css('background','red')
+	if (scrollHeight > windowHeight) {
+		content.scrollTop(scrollHeight - windowHeight);
 	}
-};
+}
+
+$(document).ready(function() {
+	adjustHeight();
+	adjustScroll();
+
+	$(window).on('resize orientationchange', function() {
+		adjustHeight();
+		adjustScroll();
+	});
+});
+
+// function keypadCheck(){
+// 	var bodyH = $('body').height();
+// 	var wrapH = $('#wrap').outerHeight();
+// 	// var winH = $('body').height();
+// 	// var docH = $('#wrap').outerHeight();
+
+// 	console.log('windowHeight:' + bodyH + 'wrapHeight:' + wrapH);
+
+// 	if (bodyH > wrapH) {
+// 		$('body').css('background','green')
+// 	} else {
+// 		$('body').css('background','red')
+// 	}
+// };
 
 
-window.addEventListener('resize', keypadCheck);
+// window.addEventListener('resize', keypadCheck);
 
 // 이전에 포커스를 설정한 요소를 기억할 변수
 let lastFocusedElement; 
