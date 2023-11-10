@@ -143,6 +143,10 @@ $(function () {
 			}).blur(function () {
 				$(this).parent().removeClass('focus');
 			});
+
+			$('input').on('focus', function(){
+				keypadCheck();
+			})
 		},
 
 		// 탭메뉴
