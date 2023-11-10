@@ -21,7 +21,7 @@ $(function () {
 
 			// alert(winH, docH);
 
-			if (winH < docH) {
+			if (winH > docH) {
 				$('body').css('background','green')
 			} else {
 				$('body').css('background','red')
