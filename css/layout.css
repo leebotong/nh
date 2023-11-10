@@ -3,7 +3,7 @@
 /* --------------------------
 		wrap
 -------------------------- */
-#wrap{display:flex;flex-direction:column;height:100%;background:tomato;}
+#wrap{position:fixed;display:flex;flex-direction:column;height:100%;background:tomato;}
 
 /* --------------------------
 		header
