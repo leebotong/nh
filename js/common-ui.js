@@ -487,23 +487,29 @@ $(function () {
     common_ui.init();
 	keypadCheck();
 
-	$(window).on('resize', keypadCheck)
+	// $(window).on('resize', keypadCheck)
 
 });
 
 // keypad check
 function keypadCheck(){
-	var winH = $('body').height();
-	var docH = $('#wrap').outerHeight();
+	var winH = window.innerHeight;
+	var wrap = $('#wrap');
+    wrap.css('height', window.innerHeight + 'px');
+	// var winH = $('body').height();
+	// var docH = $('#wrap').outerHeight();
 
-	console.log('windowHeight:' + winH + 'wrapHeight:' + docH);
+	console.log('windowHeight:' + winH + 'wrapHeight:' + wrap.height());
 
-	if (winH > docH) {
-		$('body').css('background','green')
-	} else {
-		$('body').css('background','red')
-	}
+	// if (winH > docH) {
+	// 	$('body').css('background','green')
+	// } else {
+	// 	$('body').css('background','red')
+	// }
 };
+
+
+window.addEventListener('resize', keypadCheck);
 
 // 이전에 포커스를 설정한 요소를 기억할 변수
 let lastFocusedElement; 
