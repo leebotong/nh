@@ -3,7 +3,6 @@ $(function () {
 	// 초기값 실행 함수
 	var common_ui = {
 		init: function () {
-			common_ui.keypadCheck();
 			common_ui.jsSwiper();
 			common_ui.jsHeader();
 			common_ui.jsStep();
@@ -12,20 +11,6 @@ $(function () {
 			common_ui.jsToggle();
 			common_ui.jsToast();
 			common_ui.jsChecked();
-		},
-
-		// keypad check
-		keypadCheck: function(){
-			var winH = $(window).height();
-			var docH = $('#wrap').height();
-
-			console.log('windowHeight:' + winH + 'wrapHeight:' + docH);
-
-			if (winH < docH) {
-				$('body').css('background','green')
-			} else {
-				$('body').css('background','red')
-			}
 		},
 
 		// swiper
@@ -493,9 +478,25 @@ $(function () {
 		})
 
     common_ui.init();
+	keypadCheck();
 
-	$(window).on('resize', keypadCheck);
+	$(window).on('resize', keypadCheck)
+
 });
+
+// keypad check
+function keypadCheck(){
+	var winH = $(window).height();
+	var docH = $('#wrap').height();
+
+	console.log('windowHeight:' + winH + 'wrapHeight:' + docH);
+
+	if (winH < docH) {
+		$('body').css('background','green')
+	} else {
+		$('body').css('background','red')
+	}
+};
 
 // 이전에 포커스를 설정한 요소를 기억할 변수
 let lastFocusedElement; 
