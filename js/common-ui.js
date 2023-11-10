@@ -145,7 +145,10 @@ $(function () {
 			});
 
 			$('input').on('focus', function(){
-				keypadCheck();
+				// $('#wrap').css('height','80%')
+				setTimeout(function(){
+					keypadCheck();
+				}, 1);
 			})
 		},
 
@@ -490,12 +493,12 @@ $(function () {
 
 // keypad check
 function keypadCheck(){
-	var winH = $(window).height();
+	var winH = $('body').height();
 	var docH = $('#wrap').height();
 
 	console.log('windowHeight:' + winH + 'wrapHeight:' + docH);
 
-	if (winH < docH) {
+	if (winH > docH) {
 		$('body').css('background','green')
 	} else {
 		$('body').css('background','red')
