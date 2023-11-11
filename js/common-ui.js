@@ -144,12 +144,24 @@ $(function () {
 				$(this).parent().removeClass('focus');
 			});
 
+			var focusHandler = function(){
+				$('input').not(this).off('focus', focusHandler)
+				$('html').addClass('keypad-active')
+			}
+			var blurHandler = function(){
+				$('html').removeClass('keypad-active')
+			}
+
+			var blurTimeout;
+
 			$('input').on('focus', function(){
-				// $('#wrap').css('height','80%')
-				setTimeout(function(){
-					keypadCheck();
-				}, 100);
-			})
+				focusHandler.call(this);
+				clearTimeout(blurTimeout); // Clear any existing blurTimeout
+			});
+			
+			$('input').on('blur', function(){
+				blurTimeout = setTimeout(blurHandler, 0);
+			});			
 		},
 
 		// 탭메뉴
@@ -492,25 +504,24 @@ $(function () {
 });
 
 // keypad check
-function keypadCheck(){
-	var bodyH = $('body').outerHeight();
-	var wrapH = $('#wrap').outerHeight();
-	// var winH = $('body').height();
-	// var docH = $('#wrap').outerHeight();
+// function keypadCheck(){
+// 	var bodyH = $('body').outerHeight();
+// 	var wrapH = $('#wrap').outerHeight();
+// 	var winH = $('body').height();
+// 	var docH = $('#wrap').outerHeight();
 
-	$('html, body, #wrap').css('height','auto')
+// 	$('html, body, #wrap').css('height','auto')
 
-	console.log('windowHeight:' + bodyH + 'wrapHeight:' + wrapH);
+// 	console.log('windowHeight:' + bodyH + 'wrapHeight:' + wrapH);
 
-	if (bodyH > wrapH) {
-		$('body').css('background','green')
-	} else {
-		$('body').css('background','red')
-	}
-};
+// 	if (bodyH > wrapH) {
+// 		$('body').css('background','green')
+// 	} else {
+// 		$('body').css('background','red')
+// 	}
+// };
 
-
-window.addEventListener('resize', keypadCheck);
+// window.addEventListener('resize', keypadCheck);
 
 // 이전에 포커스를 설정한 요소를 기억할 변수
 let lastFocusedElement; 
