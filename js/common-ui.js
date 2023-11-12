@@ -149,18 +149,18 @@ $(function () {
 
 			var focusHandler = function(){
 				var contentsScrollTop = $('#contents').scrollTop();
-				$('input').not(this).off('focus', focusHandler)
-				$('html').addClass('keypad-active')
-				console.log(contentsScrollTop);
-				if(contentsScrollTop > 0){
+				console.log('contentsScrollTop:' + contentsScrollTop);
+				if(!$('html').hasClass('keypad-active')){
 					$(window).scrollTop(contentsScrollTop);
 				}
+				$('input').not(this).off('focus', focusHandler)
+				$('html').addClass('keypad-active')
 			}
 			var blurHandler = function(){
 				var windowScrollTop = $(window).scrollTop();
 				$('html').removeClass('keypad-active')
 				$('#contents').scrollTop(windowScrollTop);
-				console.log(windowScrollTop);
+				console.log('windowScrollTop:' + windowScrollTop);
 			}
 
 			var blurTimeout;
