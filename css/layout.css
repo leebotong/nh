@@ -8,6 +8,7 @@
 .keypad-active,
 .keypad-active body{height:auto;}
 .keypad-active #wrap{height:auto;}
+.keyoad-active #container{overflow:initial;height:auto;}
 
 /* --------------------------
 		header

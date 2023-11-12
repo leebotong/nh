@@ -146,17 +146,17 @@ $(function () {
 			var focusHandler = function(){
 				var contentsScrollTop = $('#contents').scrollTop();
 				if(!$('html').hasClass('keypad-active')){
-					console.log('contentsScrollTop:' + contentsScrollTop);
 					$('html').addClass('keypad-active')
 					$(window).scrollTop(contentsScrollTop);
+					console.log('contentsScrollTop:' + contentsScrollTop + 'windowScrollTop:' + $(window).scrollTop());
 				}
 				$('input').not(this).off('focus', focusHandler)
 			}
 			var blurHandler = function(){
 				var windowScrollTop = $(window).scrollTop();
 				$('html').removeClass('keypad-active')
+				console.log('contentsScrollTop:' + contentsScrollTop + 'windowScrollTop:' + windowScrollTop);
 				$('#contents').scrollTop(windowScrollTop);
-				console.log('windowScrollTop:' + windowScrollTop);
 			}
 
 			var blurTimeout;
