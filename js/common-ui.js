@@ -143,36 +143,32 @@ $(function () {
 			}).blur(function () {
 				$(this).parent().removeClass('focus');
 			});
+			// var focusHandler = function(){
+			// 	var contentsScrollTop = $('#contents').scrollTop();
+			// 	if(!$('html').hasClass('keypad-active')){
+			// 		console.log('contentsScrollTop:' + contentsScrollTop);
+			// 		$(window).scrollTop(contentsScrollTop);
+			// 		$('html').addClass('keypad-active')
+			// 	}
+			// 	$('input').not(this).off('focus', focusHandler)
+			// }
+			// var blurHandler = function(){
+			// 	var windowScrollTop = $(window).scrollTop();
+			// 	$('html').removeClass('keypad-active')
+			// 	$('#contents').scrollTop(windowScrollTop);
+			// 	console.log('windowScrollTop:' + windowScrollTop);
+			// }
 
+			// var blurTimeout;
+
+			// $('input').on('focus', function(){
+			// 	focusHandler.call(this);
+			// 	clearTimeout(blurTimeout);
+			// });
 			
-			
-
-			var focusHandler = function(){
-				var contentsScrollTop = $('#contents').scrollTop();
-				console.log('contentsScrollTop:' + contentsScrollTop);
-				if(!$('html').hasClass('keypad-active')){
-					$(window).scrollTop(contentsScrollTop);
-				}
-				$('input').not(this).off('focus', focusHandler)
-				$('html').addClass('keypad-active')
-			}
-			var blurHandler = function(){
-				var windowScrollTop = $(window).scrollTop();
-				$('html').removeClass('keypad-active')
-				$('#contents').scrollTop(windowScrollTop);
-				console.log('windowScrollTop:' + windowScrollTop);
-			}
-
-			var blurTimeout;
-
-			$('input').on('focus', function(){
-				focusHandler.call(this);
-				clearTimeout(blurTimeout);
-			});
-			
-			$('input').on('blur', function(){
-				blurTimeout = setTimeout(blurHandler, 0);
-			});			
+			// $('input').on('blur', function(){
+			// 	blurTimeout = setTimeout(blurHandler, 0);
+			// });
 		},
 
 		// 탭메뉴
