@@ -145,8 +145,11 @@ $(function () {
 			});
 
 			var focusHandler = function(){
+				var offsetTop = $(this).offset().top;
+				console.log(offsetTop);
 				$('input').not(this).off('focus', focusHandler)
 				$('html').addClass('keypad-active')
+				$(window).scrollTop(offsetTop);
 			}
 			var blurHandler = function(){
 				$('html').removeClass('keypad-active')
