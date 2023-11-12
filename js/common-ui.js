@@ -150,18 +150,14 @@ $(function () {
 				if(!$('html').hasClass('keypad-active')){
 					$('html').addClass('keypad-active')
 					$(window).scrollTop(contentsScrollTop);
-					// $('body').css('top',-contentsScrollTop)
-					// if(contentsScrollTop > 0){
-					// 	$(window).scrollTop(contentsScrollTop);
-					// }
 					console.log('contentsScrollTop:' + contentsScrollTop + 'windowScrollTop:' + $(window).scrollTop() + 'windowHeight:' + windowHeight + 'offsetTop:' + offsetTop);
 				}
 				$('input').not(this).off('focus', focusHandler)
 			}
 			var blurHandler = function(){
 				var windowScrollTop = $(window).scrollTop();
-				$('html').removeClass('keypad-active')
 				$('#contents').scrollTop(windowScrollTop);
+				$('html').removeClass('keypad-active')
 				// $('body').css('top','')
 				console.log('windowScrollTop:' + windowScrollTop);
 			}
