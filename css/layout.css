@@ -6,7 +6,7 @@
 #wrap{display:flex;flex-direction:column;height:100%;}
 
 .keypad-active,
-.keypad-active body{height: -webkit-fill-available;}
+.keypad-active body{height:auto;}
 .keypad-active #wrap{height:auto;}
 .keypad-active #container{overflow:initial;height:auto;}
 
