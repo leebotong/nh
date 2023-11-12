@@ -144,12 +144,19 @@ $(function () {
 				$(this).parent().removeClass('focus');
 			});
 
+			
+			
 			var focusHandler = function(){
-				var offsetTop = $(this).offset().top;
-				console.log(offsetTop);
+				// var offsetTop = $(this).offset().top;
+				var winH = $(window).height();
+				var windowScrollTop = $(window).scrollTop();
+				if(windowScrollTop > 0){
+					$(window).scrollTop(windowScrollTop);
+				}
+				console.log(windowScrollTop);
 				$('input').not(this).off('focus', focusHandler)
 				$('html').addClass('keypad-active')
-				$(window).scrollTop(offsetTop);
+				// $(window).scrollTop(offsetTop);
 			}
 			var blurHandler = function(){
 				$('html').removeClass('keypad-active')
