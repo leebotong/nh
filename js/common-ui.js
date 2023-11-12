@@ -144,31 +144,13 @@ $(function () {
 				$(this).parent().removeClass('focus');
 			});
 			var focusHandler = function(){
-				var contentsScrollTop = $('#contents').scrollTop();
-				// var offsetTop = $(this).offset().top;
-				// var windowHeight = $(window).height();
 				if(!$('html').hasClass('keypad-active')){
 					$('html').addClass('keypad-active')
-					$('body').css({
-						'margin-top': -contentsScrollTop,
-						// 'padding-top':contentsScrollTop,
-					})
-					// document.documentElement.scrollTop = contentsScrollTop;
-					// $(window).scrollTop(contentsScrollTop)
-					
-					// console.log('contentsScrollTop:' + contentsScrollTop + 'windowScrollTop:' + $(window).scrollTop() + 'windowHeight:' + windowHeight + 'offsetTop:' + offsetTop);
 				}
 				$('input').not(this).off('focus', focusHandler)
 			}
 			var blurHandler = function(){
-				var windowScrollTop = $(window).scrollTop();
 				$('html').removeClass('keypad-active')
-				$('body').css({
-					'margin-top': '',
-					// 'padding-top':'',
-				})
-				// $('#contents').scrollTop(windowScrollTop)
-				// console.log('windowScrollTop:' + windowScrollTop);
 			}
 
 			var blurTimeout;

@@ -3,18 +3,18 @@
 /* --------------------------
 		wrap
 -------------------------- */
-#wrap{display:flex;flex-direction:column;height:100%;}
+#wrap{display:flex;flex-direction:column;min-height:100%;padding:50px 0 75px;min-height:100vh;background:linen;}
 
-.keypad-active,
+/* .keypad-active,
 .keypad-active body{height:auto;}
-/* .keypad-active body{position:fixed;} */
 .keypad-active #wrap{height:auto;}
 .keypad-active #container,
-.keypad-active #contents{overflow:initial;height:auto;flex:none;}
+.keypad-active #contents{overflow:initial;height:auto;flex:none;} */
 
 /* --------------------------
 		header
 -------------------------- */
+header{position:fixed;top:0;left:0;z-index:100;width:100%;background:#fff;}
 #header{display:flex;justify-content:space-between;align-items:center;padding:0 15px;height:50px;}
 #header h1{justify-self:center;font-weight:500;font-size:1.7rem;color:var(--fc-01);}
 #header [class*=header-]{line-height:1;}
@@ -30,14 +30,17 @@
 /* --------------------------
 		container
 -------------------------- */
-#container{overflow:auto;display:flex;flex-direction:column;flex:1;}
-#contents{position:relative;overflow:auto;padding:30px 24px 30px;flex:1;height:100%;}
+#container{min-height:100%;background:red;}
+#contents{padding:30px 24px 30px;}
+/* #container{overflow:auto;display:flex;flex-direction:column;flex:1;}
+#contents{position:relative;overflow:auto;padding:30px 24px 30px;flex:1;height:100%;} */
 .full-inner{display:flex;flex-direction:column;min-height:100%;}
 .full-inner .full-inner-contents{flex:1;}
 .full-inner .full-inner-bottom > .btn{display:flex;}
 
-#bottom{position:relative;padding:0 24px 20px;background-color:var(--bg-color-ff);/*box-shadow:0 -10px 10px var(--col-white);*/}
-#bottom::before{content:'';position:absolute;top:-30px;left:0;right:0;height:30px;background:linear-gradient(to top, var(--col-white) 40%, transparent 100%)}
+#bottom{position:fixed;left:0;bottom:0;z-index:100;width:100%;padding:0 24px 20px;background:#fff;}
+/* #bottom{position:relative;padding:0 24px 20px;background-color:var(--bg-color-ff);} */
+/* #bottom::before{content:'';position:absolute;top:-30px;left:0;right:0;height:30px;background:linear-gradient(to top, var(--col-white) 40%, transparent 100%)} */
 
 /* --------------------------
 		popup
