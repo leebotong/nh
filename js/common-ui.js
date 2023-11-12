@@ -146,16 +146,15 @@ $(function () {
 
 			
 			
-			var keypadActiveAdded = false;
+
 			var focusHandler = function(){
-				var windowScrollTop = $('#contents').scrollTop();
-				if(!keypadActiveAdded){
-					$(window).scrollTop(windowScrollTop);
-					keypadActiveAdded = true;
-				}
-				console.log(windowScrollTop);
+				var contentsScrollTop = $('#contents').scrollTop();
 				$('input').not(this).off('focus', focusHandler)
 				$('html').addClass('keypad-active')
+				console.log(contentsScrollTop);
+				if(contentsScrollTop > 0){
+					$(window).scrollTop(contentsScrollTop);
+				}
 			}
 			var blurHandler = function(){
 				var windowScrollTop = $(window).scrollTop();
