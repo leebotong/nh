@@ -149,12 +149,7 @@ $(function () {
 				var windowHeight = $(window).height();
 				if(!$('html').hasClass('keypad-active')){
 					$('html').addClass('keypad-active')
-					// if(offsetTop > (windowHeight/2)){
-					// 	$('html').css('background','red')
-					// } else {
-					// 	$('html').css('background','green')
-					// }
-					$(window).scrollTop(contentsScrollTop);
+					$(window).scrollTop(contentsScrollTop + 50);
 					console.log('contentsScrollTop:' + contentsScrollTop + 'windowScrollTop:' + $(window).scrollTop() + 'windowHeight:' + windowHeight + 'offsetTop:' + offsetTop);
 				}
 				$('input').not(this).off('focus', focusHandler)
