@@ -145,19 +145,23 @@ $(function () {
 			});
 
 			
-			var windowScrollTop = $(window).scrollTop();
-
+			
+			var keypadActiveAdded = false;
 			var focusHandler = function(){
-				if(windowScrollTop > 0){
+				var windowScrollTop = $('#contents').scrollTop();
+				if(!keypadActiveAdded){
 					$(window).scrollTop(windowScrollTop);
+					keypadActiveAdded = true;
 				}
 				console.log(windowScrollTop);
 				$('input').not(this).off('focus', focusHandler)
 				$('html').addClass('keypad-active')
 			}
 			var blurHandler = function(){
+				var windowScrollTop = $(window).scrollTop();
 				$('html').removeClass('keypad-active')
 				$('#contents').scrollTop(windowScrollTop);
+				console.log(windowScrollTop);
 			}
 
 			var blurTimeout;
