@@ -145,10 +145,17 @@ $(function () {
 			});
 			var focusHandler = function(){
 				var contentsScrollTop = $('#contents').scrollTop();
+				var offsetTop = $(this).offset().top;
+				var windowHeight = $(window).height();
 				if(!$('html').hasClass('keypad-active')){
 					$('html').addClass('keypad-active')
-					$(window).scrollTop(contentsScrollTop);
-					console.log('contentsScrollTop:' + contentsScrollTop + 'windowScrollTop:' + $(window).scrollTop());
+					if(offsetTop > (windowHeight/2)){
+						$(window).scrollTop(windowHeight / 2);
+					} else {
+						$(window).scrollTop(contentsScrollTop);
+					}
+					
+					console.log('contentsScrollTop:' + contentsScrollTop + 'windowScrollTop:' + $(window).scrollTop() + 'windowHeight:' + windowHeight + 'offsetTop:' + offsetTop);
 				}
 				$('input').not(this).off('focus', focusHandler)
 			}
