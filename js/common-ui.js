@@ -155,8 +155,8 @@ $(function () {
 			var blurHandler = function(){
 				var windowScrollTop = $(window).scrollTop();
 				$('html').removeClass('keypad-active')
-				console.log('contentsScrollTop:' + contentsScrollTop + 'windowScrollTop:' + windowScrollTop);
 				$('#contents').scrollTop(windowScrollTop);
+				console.log('windowScrollTop:' + windowScrollTop);
 			}
 
 			var blurTimeout;
