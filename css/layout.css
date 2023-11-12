@@ -5,6 +5,10 @@
 -------------------------- */
 #wrap{display:flex;flex-direction:column;height:100%;}
 
+.keypad-active,
+.keypad-active body{height:auto;}
+.keypad-active #wrap{height:auto;}
+
 /* --------------------------
 		header
 -------------------------- */

@@ -156,7 +156,7 @@ $(function () {
 
 			$('input').on('focus', function(){
 				focusHandler.call(this);
-				clearTimeout(blurTimeout); // Clear any existing blurTimeout
+				clearTimeout(blurTimeout);
 			});
 			
 			$('input').on('blur', function(){
