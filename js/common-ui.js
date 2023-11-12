@@ -149,7 +149,10 @@ $(function () {
 				var windowHeight = $(window).height();
 				if(!$('html').hasClass('keypad-active')){
 					$('html').addClass('keypad-active')
-					$(window).scrollTop(contentsScrollTop - 50);
+					$('body').css('top',-contentsScrollTop)
+					// if(contentsScrollTop > 0){
+					// 	$(window).scrollTop(contentsScrollTop);
+					// }
 					console.log('contentsScrollTop:' + contentsScrollTop + 'windowScrollTop:' + $(window).scrollTop() + 'windowHeight:' + windowHeight + 'offsetTop:' + offsetTop);
 				}
 				$('input').not(this).off('focus', focusHandler)
@@ -158,6 +161,7 @@ $(function () {
 				var windowScrollTop = $(window).scrollTop();
 				$('html').removeClass('keypad-active')
 				$('#contents').scrollTop(windowScrollTop);
+				$('body').css('top','')
 				console.log('windowScrollTop:' + windowScrollTop);
 			}
 

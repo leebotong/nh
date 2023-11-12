@@ -7,6 +7,7 @@
 
 .keypad-active,
 .keypad-active body{height:auto;}
+.keypad-active body{position:fixed;}
 .keypad-active #wrap{height:auto;}
 .keypad-active #container{overflow:initial;height:auto;}
 
