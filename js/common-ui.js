@@ -156,8 +156,8 @@ $(function () {
 			}
 			var blurHandler = function(){
 				var windowScrollTop = $(window).scrollTop();
-				$('#contents').scrollTop(windowScrollTop);
 				$('html').removeClass('keypad-active')
+				$('#contents').scrollTop(windowScrollTop)
 				// $('body').css('top','')
 				console.log('windowScrollTop:' + windowScrollTop);
 			}
