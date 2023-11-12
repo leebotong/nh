@@ -149,7 +149,11 @@ $(function () {
 				// var windowHeight = $(window).height();
 				if(!$('html').hasClass('keypad-active')){
 					$('html').addClass('keypad-active')
-					document.documentElement.scrollTop = contentsScrollTop;
+					$('body').css({
+						'margin-top': -contentsScrollTop,
+						// 'padding-top':contentsScrollTop,
+					})
+					// document.documentElement.scrollTop = contentsScrollTop;
 					// $(window).scrollTop(contentsScrollTop)
 					
 					// console.log('contentsScrollTop:' + contentsScrollTop + 'windowScrollTop:' + $(window).scrollTop() + 'windowHeight:' + windowHeight + 'offsetTop:' + offsetTop);
@@ -157,10 +161,13 @@ $(function () {
 				$('input').not(this).off('focus', focusHandler)
 			}
 			var blurHandler = function(){
-				var windowScrollTop = document.documentElement.scrollTop;
+				var windowScrollTop = $(window).scrollTop();
 				$('html').removeClass('keypad-active')
-				$('#contents').scrollTop(windowScrollTop)
-				// $('body').css('top','')
+				$('body').css({
+					'margin-top': '',
+					// 'padding-top':'',
+				})
+				// $('#contents').scrollTop(windowScrollTop)
 				// console.log('windowScrollTop:' + windowScrollTop);
 			}
 
