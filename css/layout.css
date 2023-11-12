@@ -10,7 +10,7 @@
 /* .keypad-active body{position:fixed;} */
 .keypad-active #wrap{height:auto;}
 .keypad-active #container,
-.keypad-active #contents{overflow:initial;height:auto;}
+.keypad-active #contents{overflow:initial;height:auto;flex:none;}
 
 /* --------------------------
 		header

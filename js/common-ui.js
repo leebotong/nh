@@ -149,7 +149,10 @@ $(function () {
 				var windowHeight = $(window).height();
 				if(!$('html').hasClass('keypad-active')){
 					$('html').addClass('keypad-active')
-					$(window).scrollTop(contentsScrollTop);
+					setTimeout(function(){
+						$(window).scrollTop(contentsScrollTop);
+					},200)
+					
 					console.log('contentsScrollTop:' + contentsScrollTop + 'windowScrollTop:' + $(window).scrollTop() + 'windowHeight:' + windowHeight + 'offsetTop:' + offsetTop);
 				}
 				$('input').not(this).off('focus', focusHandler)
