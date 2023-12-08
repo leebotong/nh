@@ -32,7 +32,7 @@ header{position:fixed;top:0;left:0;z-index:100;width:100%;background:#fff;}
 /* --------------------------
 		container
 -------------------------- */
-#container{min-height:100%;background:red;}
+#container{min-height:100%;}
 #contents{padding:30px 24px 30px;}
 /* #container{overflow:auto;display:flex;flex-direction:column;flex:1;}
 #contents{position:relative;overflow:auto;padding:30px 24px 30px;flex:1;height:100%;} */
