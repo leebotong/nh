@@ -43,7 +43,7 @@ $(function () {
 					},
 				}
 
-				var swiper1 = new Swiper('.swiper-terms .swiper-container', defaultOptions);
+				var swiper1 = new Swiper('.swiper-terms .swiper-container, .swiper-rolling .swiper-container', defaultOptions);
 				var swiper2 = new Swiper('.swiper-certification .swiper-container', {
 					...defaultOptions,
 					slidesPerView: 'auto',
@@ -71,18 +71,18 @@ $(function () {
 					// 	},
 					// },
 				});
-				var swiper3 = new Swiper('.swiper-rolling .swiper-container', {
-					...defaultOptions,
-					allowTouchMove : false,
-					autoplay: {
-						delay: 0, //add
-						disableOnInteraction: false,
-					},
-					speed: 5000,
-					loop: true,
-					loopAdditionalSlides: 1,
-					slidesPerView: 3,
-				})
+				// var swiper3 = new Swiper('.swiper-rolling .swiper-container', {
+				// 	...defaultOptions,
+				// 	allowTouchMove : false,
+				// 	autoplay: {
+				// 		delay: 0, //add
+				// 		disableOnInteraction: false,
+				// 	},
+				// 	speed: 5000,
+				// 	loop: true,
+				// 	loopAdditionalSlides: 1,
+				// 	slidesPerView: 3,
+				// })
 
 				// var swiper2 = new Swiper('.swiper-certification .swiper-container', {
 				// 	defaultOptions,
